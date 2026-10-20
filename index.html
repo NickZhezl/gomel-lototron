@@ -1,0 +1,877 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="81 заведений с доставкой еды по Гомелю: крутите барабан и сразу переходите к заказу. Акции и где заказать дешевле.">
+<meta property="og:title" content="Гомельский лототрон">
+<meta property="og:description" content="81 заведений с доставкой еды по Гомелю: крутите барабан и сразу переходите к заказу. Акции и где заказать дешевле.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23CF3C27'/%3E%3Ccircle cx='32' cy='32' r='18' fill='white'/%3E%3Ctext x='32' y='40' font-family='monospace' font-weight='700' font-size='22' text-anchor='middle' fill='%2318244A'%3E7%3C/text%3E%3C/svg%3E">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>Гомельский лототрон</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Unbounded:wght@500;700;800&display=swap">
+<style>
+/* Layout: a lottery ticket on mint banknote paper. Drum on the left, the drawn ticket on the right with a tear-off order stub; tabs read like ticket counterfoils. */
+:root {
+  --paper: #EDF1E8;
+  --paper-2: #E0E7DA;
+  --card: #FAFBF6;
+  --ink: #18244A;
+  --ink-2: #4F5A79;
+  --line: #C3CDBC;
+  --red: #CF3C27;
+  --red-bg: #F7DDD6;
+  --on-red: #FFFFFF;
+  --green: #22704A;
+  --green-bg: #D8EAD9;
+  --amber: #E3A410;
+  --blue: #2B5FC4;
+  --blue-bg: #DCE5F7;
+  --shadow: 0 1px 0 rgba(24, 36, 74, .05), 0 14px 32px -20px rgba(24, 36, 74, .45);
+  --f-display: "Unbounded", "Arial Black", "Segoe UI", system-ui, sans-serif;
+  --f-body: "Golos Text", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --r: 14px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0C1330; --paper-2: #121B3F; --card: #17214B; --ink: #E7EBF6; --ink-2: #A0AAC6; --line: #2A366B;
+    --red: #FF6A4F; --red-bg: #3B1D24; --on-red: #1B0E0B; --green: #62CE8E; --green-bg: #15372A;
+    --amber: #F2BD35; --blue: #7CA3FF; --blue-bg: #1B2A5C;
+    --shadow: 0 1px 0 rgba(0, 0, 0, .2), 0 16px 34px -20px rgba(0, 0, 0, .8);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0C1330; --paper-2: #121B3F; --card: #17214B; --ink: #E7EBF6; --ink-2: #A0AAC6; --line: #2A366B;
+  --red: #FF6A4F; --red-bg: #3B1D24; --on-red: #1B0E0B; --green: #62CE8E; --green-bg: #15372A;
+  --amber: #F2BD35; --blue: #7CA3FF; --blue-bg: #1B2A5C;
+  --shadow: 0 1px 0 rgba(0, 0, 0, .2), 0 16px 34px -20px rgba(0, 0, 0, .8);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 15px/1.5 var(--f-body);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+button, input, select { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; border-radius: 6px; }
+h1, h2, h3 { text-wrap: balance; margin: 0; }
+.wrap {
+  max-width: 1120px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.mono { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+.label { font: 600 11px/1.2 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); }
+
+/* ---------- header ---------- */
+.top {
+  background:
+    repeating-linear-gradient(115deg, transparent 0 7px, color-mix(in srgb, var(--line) 45%, transparent) 7px 8px),
+    var(--paper-2);
+  border-bottom: 1px solid var(--line);
+}
+.top .wrap { padding-block: 22px 0; display: grid; gap: 18px; }
+.brand { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 10px 24px; }
+.brand h1 { font: 800 clamp(26px, 5vw, 42px)/1 var(--f-display); letter-spacing: -.02em; }
+.brand h1 span { color: var(--red); }
+.brand p { margin: 0; color: var(--ink-2); max-width: 46ch; }
+.tabs { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; margin-bottom: -1px; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab {
+  flex: 0 0 auto; border: 1px solid var(--line); border-bottom: none; background: transparent;
+  padding: 10px 16px 11px; border-radius: 12px 12px 0 0; cursor: pointer;
+  font: 600 14px/1 var(--f-body); color: var(--ink-2);
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.tab .count { font: 700 11px/1 var(--f-mono); padding: 3px 6px; border-radius: 99px; background: var(--paper); color: var(--ink-2); }
+.tab[aria-selected="true"] { background: var(--paper); color: var(--ink); }
+.tab[aria-selected="true"] .count { background: var(--red); color: var(--on-red); }
+.tab:hover { color: var(--ink); }
+
+main .wrap { padding-block: 26px 40px; }
+section[role="tabpanel"] { display: grid; gap: 22px; }
+
+/* ---------- filters ---------- */
+.filters { display: grid; gap: 12px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  border: 1px solid var(--line); background: var(--card); border-radius: 99px; padding: 7px 13px;
+  cursor: pointer; font-weight: 500; font-size: 14px; display: inline-flex; gap: 6px; align-items: center;
+}
+.chip small { font: 600 11px var(--f-mono); color: var(--ink-2); }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.chip[aria-pressed="true"] small { color: color-mix(in srgb, var(--paper) 70%, transparent); }
+.toggles { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; }
+.toggle { display: inline-flex; gap: 8px; align-items: center; cursor: pointer; font-size: 14px; }
+.toggle input { accent-color: var(--red); width: 17px; height: 17px; margin: 0; }
+.select { display: inline-flex; gap: 8px; align-items: center; font-size: 14px; }
+.select select { border: 1px solid var(--line); background: var(--card); border-radius: 10px; padding: 6px 10px; }
+
+/* ---------- draw ---------- */
+.draw-grid { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: 28px; align-items: start; }
+.machine { display: grid; gap: 14px; justify-items: center; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 12px); }
+.drum-box { width: 100%; max-width: 340px; aspect-ratio: 1; position: relative; }
+#drum { width: 100%; height: 100%; display: block; }
+.spin {
+  width: 100%; max-width: 340px; border: none; cursor: pointer; border-radius: 16px; padding: 16px 20px;
+  background: var(--red); color: var(--on-red); font: 700 17px/1 var(--f-display); letter-spacing: .01em;
+  box-shadow: 0 4px 0 color-mix(in srgb, var(--red) 55%, var(--ink)); transition: transform .08s, box-shadow .08s;
+}
+.spin:active { transform: translateY(3px); box-shadow: 0 1px 0 color-mix(in srgb, var(--red) 55%, var(--ink)); }
+.spin:disabled { opacity: .7; cursor: progress; }
+.pool { margin: 0; font-size: 13px; color: var(--ink-2); text-align: center; }
+.pool b { font-family: var(--f-mono); color: var(--ink); }
+
+.ticket {
+  --notch: 12px;
+  background: var(--card); border-radius: var(--r); box-shadow: var(--shadow); min-width: 0;
+  display: grid; grid-template-columns: minmax(0, 1fr) 210px; position: relative; overflow: hidden;
+  border: 1px solid var(--line);
+}
+.ticket.pop { animation: pop .45s cubic-bezier(.2, .9, .3, 1.2); }
+@keyframes pop { from { transform: translateY(14px) scale(.98); opacity: .2; } to { transform: none; opacity: 1; } }
+.t-main { padding: 18px 20px 20px; display: grid; gap: 14px; min-width: 0; }
+.t-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; align-items: baseline; border-bottom: 1px dashed var(--line); padding-bottom: 10px; }
+.t-head .no { white-space: nowrap; font: 700 13px var(--f-mono); color: var(--red); letter-spacing: .06em; }
+.t-body { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 18px; align-items: start; }
+.t-img { position: relative; border-radius: 10px; overflow: hidden; aspect-ratio: 3 / 2; background: var(--paper-2); max-width: 100%; }
+.t-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.t-ph { width: 100%; height: 100%; display: grid; place-items: center; font: 800 44px var(--f-display); color: var(--ink-2); }
+.t-name { font: 700 clamp(22px, 3.2vw, 30px)/1.1 var(--f-display); letter-spacing: -.015em; overflow-wrap: anywhere; }
+.t-cz { margin: 6px 0 0; color: var(--ink-2); }
+.facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 18px; margin: 0; }
+.facts div { min-width: 0; }
+.facts dt { font: 600 10.5px/1.3 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); }
+.facts dd { margin: 2px 0 0; font-weight: 500; overflow-wrap: anywhere; }
+.facts .wide { grid-column: 1 / -1; }
+.star { color: var(--amber); }
+.pill { display: inline-block; font: 600 11px/1 var(--f-mono); padding: 4px 7px; border-radius: 99px; vertical-align: 1px; margin-left: 4px; }
+.pill.open { background: var(--green-bg); color: var(--green); }
+.pill.closed { background: var(--red-bg); color: var(--red); }
+.promos { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.promos li { font-size: 13px; padding: 5px 9px; border-radius: 8px; background: var(--red-bg); color: var(--red); font-weight: 600; }
+.promos li.own { background: var(--green-bg); color: var(--green); }
+.verdict { margin: 0; padding: 10px 12px; border-radius: 10px; background: var(--paper); font-size: 14px; border: 1px solid var(--line); }
+.verdict b { font-weight: 700; }
+.t-stub {
+  border-left: 2px dashed var(--line); padding: 18px 18px 20px; display: grid; align-content: space-between; gap: 14px;
+  background: color-mix(in srgb, var(--paper-2) 55%, var(--card)); position: relative;
+}
+.t-stub::before, .t-stub::after {
+  content: ""; position: absolute; left: calc(var(--notch) * -1 - 1px); width: calc(var(--notch) * 2); height: calc(var(--notch) * 2);
+  border-radius: 50%; background: var(--paper); border: 1px solid var(--line);
+}
+.t-stub::before { top: calc(var(--notch) * -1); }
+.t-stub::after { bottom: calc(var(--notch) * -1); }
+.stub-num { font: 800 46px/1 var(--f-display); color: var(--ink); letter-spacing: -.03em; }
+.stub-num small { display: block; font: 600 10.5px/1.3 var(--f-mono); letter-spacing: .1em; color: var(--ink-2); margin-bottom: 6px; }
+.stub-actions { display: grid; gap: 8px; }
+.btn-order {
+  display: grid; gap: 4px; text-decoration: none; background: var(--ink); color: var(--paper); border-radius: 12px;
+  padding: 13px 14px; font: 700 15px/1.1 var(--f-display);
+}
+.btn-order span { font: 500 12px/1.2 var(--f-body); opacity: .8; }
+.btn-order:hover { background: color-mix(in srgb, var(--ink) 88%, var(--red)); }
+.btn-alt, .btn-again {
+  display: block; text-align: center; text-decoration: none; border: 1px solid var(--line); background: var(--card);
+  border-radius: 10px; padding: 9px 10px; font-weight: 600; font-size: 14px; cursor: pointer;
+}
+.btn-again { background: transparent; }
+.branches { margin: 0; padding: 0; list-style: none; display: grid; gap: 4px; font-size: 14px; }
+.branches a { color: var(--blue); }
+
+.history { display: grid; gap: 8px; }
+.history .chips .chip { font-size: 13px; padding: 5px 10px; }
+.history .chip b { font-family: var(--f-mono); color: var(--red); }
+
+/* ---------- generic blocks ---------- */
+.section-head { display: grid; gap: 6px; }
+.section-head h2 { font: 700 clamp(20px, 3vw, 26px)/1.15 var(--f-display); }
+.section-head p { margin: 0; color: var(--ink-2); max-width: 70ch; }
+.cards3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.info-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 16px 18px; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.info-card .big { font: 800 30px/1 var(--f-display); color: var(--red); letter-spacing: -.02em; }
+.info-card h3 { font: 700 15px/1.25 var(--f-body); }
+.info-card p { margin: 0; color: var(--ink-2); font-size: 14px; }
+.code {
+  display: inline-flex; align-items: center; gap: 8px; font: 700 14px var(--f-mono); letter-spacing: .08em;
+  border: 1.5px dashed var(--red); color: var(--red); border-radius: 8px; padding: 5px 6px 5px 10px; background: transparent; cursor: pointer;
+}
+.code span { font: 600 11px var(--f-body); letter-spacing: 0; color: var(--ink-2); }
+.seg { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 4px; border-radius: 12px; background: var(--paper-2); border: 1px solid var(--line); }
+.seg button { border: none; background: transparent; border-radius: 9px; padding: 7px 12px; cursor: pointer; font-weight: 600; font-size: 14px; color: var(--ink-2); }
+.seg button[aria-pressed="true"] { background: var(--card); color: var(--ink); box-shadow: 0 1px 2px rgba(0, 0, 0, .12); }
+
+.rows { display: grid; gap: 8px; }
+.row {
+  display: grid; grid-template-columns: 92px minmax(0, 1fr) auto; gap: 16px; align-items: center;
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px;
+}
+.row .big { font: 800 22px/1 var(--f-display); color: var(--red); letter-spacing: -.02em; text-align: center; }
+.row .big.g { color: var(--green); }
+.row .big small { display: block; font: 600 10px/1.3 var(--f-mono); letter-spacing: .08em; color: var(--ink-2); margin-top: 4px; text-transform: uppercase; }
+.row h3 { font: 700 15px/1.25 var(--f-body); }
+.row p { margin: 2px 0 0; color: var(--ink-2); font-size: 14px; overflow-wrap: anywhere; }
+.row .go { white-space: nowrap; text-decoration: none; font-weight: 700; font-size: 14px; padding: 9px 13px; border-radius: 10px; background: var(--ink); color: var(--paper); }
+.row .go.alt { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+.row .acts { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+.empty { padding: 26px; text-align: center; color: var(--ink-2); background: var(--card); border: 1px dashed var(--line); border-radius: 12px; }
+
+/* compare */
+.cmp { display: grid; gap: 8px; }
+.cmp-row {
+  display: grid; grid-template-columns: minmax(150px, 1.1fr) minmax(0, 1.4fr) minmax(0, 1.4fr) minmax(150px, 1fr); gap: 16px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; align-items: start;
+}
+.cmp-row.head { background: transparent; border: none; padding-block: 0 2px; }
+.cmp-row h3 { font: 700 15px/1.25 var(--f-body); }
+.cmp-row .sub { color: var(--ink-2); font-size: 13px; }
+.cmp-cell { min-width: 0; font-size: 14px; display: grid; gap: 4px; overflow-wrap: anywhere; }
+.cmp-cell .label { display: none; }
+.cmp-cell a { color: var(--blue); font-weight: 600; }
+.vchip { display: inline-block; font: 700 12px/1.2 var(--f-body); padding: 5px 9px; border-radius: 8px; }
+.vchip.own { background: var(--green-bg); color: var(--green); }
+.vchip.yandex { background: var(--blue-bg); color: var(--blue); }
+.vchip.same, .vchip.unknown { background: var(--paper-2); color: var(--ink-2); }
+.why { color: var(--ink-2); font-size: 13px; }
+.only-y { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; font-size: 14px; color: var(--ink-2); }
+.only-y b { color: var(--ink); }
+
+/* all */
+.search { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.search input { flex: 1 1 240px; min-width: 0; border: 1px solid var(--line); background: var(--card); border-radius: 12px; padding: 10px 14px; }
+.list-row { grid-template-columns: 46px 64px minmax(0, 1fr) auto; }
+.list-row .n { font: 700 14px var(--f-mono); color: var(--red); text-align: center; }
+.list-row .thumb { width: 64px; height: 44px; border-radius: 8px; object-fit: cover; background: var(--paper-2); display: block; }
+.agg { display: grid; gap: 8px; }
+.agg li { font-size: 14px; }
+.agg ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; color: var(--ink-2); }
+
+footer { border-top: 1px solid var(--line); color: var(--ink-2); font-size: 13px; }
+footer .wrap { padding-block: 18px 28px; display: grid; gap: 4px; }
+
+.toast {
+  position: fixed; left: 50%; bottom: calc(env(safe-area-inset-bottom, 0px) + 20px); transform: translateX(-50%);
+  background: var(--ink); color: var(--paper); padding: 10px 16px; border-radius: 10px; font-weight: 600; font-size: 14px; z-index: 5;
+}
+
+@media (max-width: 900px) {
+  .draw-grid { grid-template-columns: minmax(0, 1fr); }
+  .machine { position: static; }
+  .cmp-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .cmp-row.head { display: none; }
+  .cmp-row > :first-child, .cmp-row > :last-child { grid-column: 1 / -1; }
+  .cmp-cell .label { display: block; }
+  .cards3 { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 640px) {
+  .ticket { grid-template-columns: minmax(0, 1fr); }
+  .t-stub { border-left: none; border-top: 2px dashed var(--line); grid-template-columns: auto minmax(0, 1fr); align-items: end; }
+  .t-stub::before, .t-stub::after { top: calc(var(--notch) * -1 - 1px); bottom: auto; left: auto; }
+  .t-stub::before { left: calc(var(--notch) * -1); }
+  .t-stub::after { right: calc(var(--notch) * -1); }
+  .stub-num { font-size: 38px; }
+  .t-body { grid-template-columns: minmax(0, 1fr); }
+  .t-img { aspect-ratio: 16 / 9; }
+  .facts { grid-template-columns: minmax(0, 1fr); }
+  .row { grid-template-columns: 70px minmax(0, 1fr); }
+  .row .acts { grid-column: 1 / -1; justify-content: stretch; }
+  .row .acts .go { flex: 1; text-align: center; }
+  .list-row { grid-template-columns: 34px minmax(0, 1fr); }
+  .list-row .thumb { display: none; }
+  .cmp-row { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ticket.pop { animation: none; }
+}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <h1>Гомельский <span>лототрон</span></h1>
+      <p id="lead">Крутите барабан — он выберет, откуда заказать еду с доставкой по Гомелю.</p>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="Разделы">
+      <button class="tab" role="tab" id="tab-draw" aria-controls="draw" aria-selected="true">Барабан</button>
+      <button class="tab" role="tab" id="tab-promo" aria-controls="promo" aria-selected="false">Акции <span class="count" id="cnt-promo"></span></button>
+      <button class="tab" role="tab" id="tab-compare" aria-controls="compare" aria-selected="false">Где выгоднее</button>
+      <button class="tab" role="tab" id="tab-all" aria-controls="all" aria-selected="false">Все заведения <span class="count" id="cnt-all"></span></button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <!-- DRAW -->
+    <section id="draw" role="tabpanel" aria-labelledby="tab-draw">
+      <div class="filters">
+        <div class="chips" id="cuisines" aria-label="Кухня"></div>
+        <div class="toggles">
+          <label class="toggle"><input type="checkbox" id="f-open"> Открыто сейчас</label>
+          <label class="toggle"><input type="checkbox" id="f-sale"> Есть скидка</label>
+          <label class="toggle"><input type="checkbox" id="f-top"> Рейтинг 4.8+</label>
+          <label class="select">Район
+            <select id="f-area"><option value="">весь город</option></select>
+          </label>
+        </div>
+      </div>
+      <div class="draw-grid">
+        <div class="machine">
+          <div class="drum-box"><canvas id="drum" aria-label="Лотерейный барабан с номерами заведений" role="img"></canvas></div>
+          <button class="spin" id="spin">Крутить барабан</button>
+          <p class="pool" id="pool"></p>
+        </div>
+        <div style="display:grid;gap:18px;min-width:0">
+          <article class="ticket" id="ticket" aria-live="polite"></article>
+          <div class="history" id="history" hidden>
+            <span class="label">Уже выпадало</span>
+            <div class="chips" id="history-chips"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROMO -->
+    <section id="promo" role="tabpanel" aria-labelledby="tab-promo" hidden>
+      <div class="section-head">
+        <h2>Акции на доставку в Гомеле</h2>
+        <p>Скидки и промокоды из Яндекс Еды и с сайтов самих заведений. Условия меняются, поэтому проверяйте сумму в корзине перед оплатой.</p>
+      </div>
+      <div class="cards3" id="promo-common"></div>
+      <div class="seg" id="promo-seg" role="group" aria-label="Тип акции"></div>
+      <div class="rows" id="promo-rows"></div>
+    </section>
+
+    <!-- COMPARE -->
+    <section id="compare" role="tabpanel" aria-labelledby="tab-compare" hidden>
+      <div class="section-head">
+        <h2>Где заказать дешевле</h2>
+        <p>Сравнение доставки и акций: Яндекс Еда против сайта или приложения самого заведения.</p>
+      </div>
+      <div class="cards3" id="cmp-tips"></div>
+      <div class="seg" id="cmp-seg" role="group" aria-label="Итог сравнения"></div>
+      <div class="cmp" id="cmp-rows"></div>
+      <div class="only-y" id="only-y"></div>
+    </section>
+
+    <!-- ALL -->
+    <section id="all" role="tabpanel" aria-labelledby="tab-all" hidden>
+      <div class="section-head">
+        <h2>Все заведения с доставкой</h2>
+        <p id="all-lead"></p>
+      </div>
+      <div class="search">
+        <input type="search" id="q" placeholder="Название или кухня: суши, шаурма, Додо…" aria-label="Поиск">
+        <div class="seg" id="sort-seg" role="group" aria-label="Сортировка"></div>
+      </div>
+      <div class="rows" id="all-rows"></div>
+      <div class="agg info-card" id="aggs" hidden></div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span id="foot-data"></span>
+    <span>Номер на билете — порядковый номер заведения в списке. Районы доставки определены приблизительно, по проверочным точкам на карте.</span>
+  </div>
+</footer>
+
+<script type="application/json" id="data">{"dateHuman":"20 октября 2026","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский","Костюковка","Прудок","Старый аэропорт"],"places":[{"n":"Авокадо","cz":["Фастфуд","Пицца","Суши"],"r":4.9,"rc":"595","img":"2d5a8d818da7.webp","hours":"с 11:00 до 22:45","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, Советская улица, 30","url":"https://eda.yandex.by/gomel/r/avokado_by?placeSlug=avokado_ykbmo"}],"y":{"url":"https://eda.yandex.by/gomel/r/avokado_by?placeSlug=avokado_ykbmo","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":1},{"n":"Арлекино","cz":["Итальянская","Пицца"],"r":5.0,"rc":"188","img":"4f65bc5debc2.webp","hours":"с 10:00 до 22:00","areas":["Сельмаш","Волотова","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, проспект Космонавтов, 61А","url":"https://eda.yandex.by/gomel/r/arlekino_by?placeSlug=arlekino"}],"y":{"url":"https://eda.yandex.by/gomel/r/arlekino_by?placeSlug=arlekino","own":true,"dc":"Бесплатно","min":20,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29"]},"num":2},{"n":"БаРак","cz":["Пицца","Суши"],"r":4.9,"rc":"297","img":"b05ac9576213.webp","hours":"с 11:00 до 22:00","areas":["Центр","Сельмаш","Волотова","Мельников Луг","Южный","Север","Любенский","Прудок"],"br":[{"a":"улица Барыкина, 230Б","url":"https://eda.yandex.by/gomel/r/barak_by?placeSlug=barak_l4gpv"},{"a":"Подгорная улица, 12/1","url":"https://eda.yandex.by/gomel/r/barak_by?placeSlug=barak"}],"y":{"url":"https://eda.yandex.by/gomel/r/barak_by?placeSlug=barak_l4gpv","own":true,"dc":"Доставка 6 р.. Бесплатно при заказе от 25 р.","min":20,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29"]},"num":3},{"n":"Бонсай","cz":["Суши","Пицца"],"r":4.7,"rc":"347","img":"753d418001a0.webp","hours":"с 11:20 до 22:40","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, Гомель, Рогачёвская улица, 4","url":"https://eda.yandex.by/gomel/r/bonsaj_by?placeSlug=bonsaj_avjkw"}],"y":{"url":"https://eda.yandex.by/gomel/r/bonsaj_by?placeSlug=bonsaj_avjkw","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":4},{"n":"Васильки","cz":["Белорусская","Домашняя","Детское меню","Закуски","Салаты","Десерты","Пельмени"],"r":4.9,"rc":"2233","img":"7618d7139028.webp","hours":"с 11:00 до 22:00","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, проспект Победы, 29","url":"https://eda.yandex.by/gomel/r/vasilki?placeSlug=vasilki_gxspm"}],"y":{"url":"https://eda.yandex.by/gomel/r/vasilki?placeSlug=vasilki_gxspm","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":5},{"n":"Ваш лаваш","cz":["Шаурма","Фастфуд"],"r":4.8,"rc":"1207","img":"7d951bd64556.webp","hours":"с 10:20 до 20:30","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, улица Гагарина, 65","url":"https://eda.yandex.by/gomel/r/vash_lavash_by?placeSlug=vash_lavash_tuqsj"},{"a":"Беларусь, Гомель, Речицкий проспект, 40/1","url":"https://eda.yandex.by/gomel/r/vash_lavash_by?placeSlug=vash_lavash_4n2r9"}],"y":{"url":"https://eda.yandex.by/gomel/r/vash_lavash_by?placeSlug=vash_lavash_tuqsj","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":6},{"n":"Вкус Востока","cz":["Фастфуд","Закуски","Шаурма"],"r":4.8,"rc":"1477","img":"38a01e7b3fc7.webp","hours":"с 09:00 до 23:00","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, проспект Октября, 4","url":"https://eda.yandex.by/gomel/r/vkus_vostoka_1624708822?placeSlug=vkus__vostoka_bompq"}],"y":{"url":"https://eda.yandex.by/gomel/r/vkus_vostoka_1624708822?placeSlug=vkus__vostoka_bompq","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Подарок к заказу  — $ITEM_NAME$ при заказе от 31 без учёта доставки и работы сервиса","Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":7},{"n":"Вкус Востока 2","cz":["Фастфуд","Ланчи","Пицца","Шаурма"],"r":4.7,"rc":"757","img":"62a055a835ae.webp","hours":"с 09:00 до 21:45","areas":["Центр","Новобелица","Шведская горка","Мельников Луг","Южный","Любенский"],"br":[{"a":"Беларусь, Гомель, улица Ильича, 301","url":"https://eda.yandex.by/gomel/r/vkus_vostoka_2?placeSlug=vkus_vostoka_2"}],"y":{"url":"https://eda.yandex.by/gomel/r/vkus_vostoka_2?placeSlug=vkus_vostoka_2","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":8},{"n":"Вкус востока 3","cz":["Фастфуд","Шаурма","Ланчи","Закуски"],"r":4.7,"rc":"1227","img":"bf1ac20c7c6a.webp","hours":"с 09:00 до 23:00","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"проспект Победы, 11","url":"https://eda.yandex.by/gomel/r/vkus_vostoka_3_by?placeSlug=kafe_vkus_vostoka_3"},{"a":"проспект Космонавтов, 96","url":"https://eda.yandex.by/gomel/r/vkus_vostoka_3_by?placeSlug=vkus_vostoka_53rt6"}],"y":{"url":"https://eda.yandex.by/gomel/r/vkus_vostoka_3_by?placeSlug=kafe_vkus_vostoka_3","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":9},{"n":"Додо Пицца","cz":["Пицца","Американская","Кофе"],"r":4.8,"rc":"2678","img":"b69709ff3f05.webp","hours":"с 11:00 до 23:00","areas":["Центр","Новобелица","Сельмаш","Волотова","Южный","Север","Любенский"],"br":[{"a":"Речицкий проспект, 5В","url":"https://eda.yandex.by/gomel/r/dodo_picca?placeSlug=dodo_c8dx7"},{"a":"Советская улица, 2","url":"https://eda.yandex.by/gomel/r/dodo_picca?placeSlug=dodo_6drtw"},{"a":"улица М.Г. Ефремова, 11","url":"https://eda.yandex.by/gomel/r/dodo_picca?placeSlug=dodo_b845n"}],"y":{"url":"https://eda.yandex.by/gomel/r/dodo_picca?placeSlug=dodo_c8dx7","own":true,"dc":"Бесплатно","min":28,"pr":["–50% на ряд блюд — на любой заказ","–40% на ряд блюд — на любой заказ","–30% на ряд блюд — на любой заказ","–20% на ряд блюд — на любой заказ","–10% на ряд блюд — на любой заказ","Скидка на всю корзину — -20 руб по промокоду DODO20, на первый заказ от 29 руб","Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29"]},"num":10},{"n":"ДОМ","cz":["Домашняя","Салаты","Блины","Завтраки"],"r":4.8,"rc":"304","img":"92bccb4a694b.webp","hours":"с 08:00 до 21:30","areas":["Центр","Сельмаш","Волотова","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"проспект Ленина, 34","url":"https://eda.yandex.by/gomel/r/kafe_dom_1719913696?placeSlug=kafe_dom"}],"y":{"url":"https://eda.yandex.by/gomel/r/kafe_dom_1719913696?placeSlug=kafe_dom","own":true,"dc":"Доставка 5 р.. Бесплатно при заказе от 65 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29"]},"num":11},{"n":"Доминос пицца","cz":["Американская","Закуски","Пицца","Фастфуд","Десерты"],"r":4.8,"rc":"1455","img":"90535668ec15.webp","hours":"с 11:00 до 23:00","areas":["Центр","Новобелица","Сельмаш","Волотова","Мельников Луг","Южный","Север","Любенский","Старый аэропорт"],"br":[{"a":"Беларусь, Гомель, Советская улица, 46","url":"https://eda.yandex.by/gomel/r/dominos_pizza?placeSlug=dominos_oqrpu"},{"a":"Беларусь, Гомель, Речицкий проспект, 62А","url":"https://eda.yandex.by/gomel/r/dominos_pizza?placeSlug=dominos_qcehz"}],"y":{"url":"https://eda.yandex.by/gomel/r/dominos_pizza?placeSlug=dominos_oqrpu","own":true,"dc":"Доставка 10 р.. Бесплатно при заказе от 35 р.","min":0,"pr":["-50% на ряд блюд — на любой заказ","–40% на ряд блюд — на любой заказ","–20% на ряд блюд — на любой заказ","Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29"]},"num":12},{"n":"Донер-Сити","cz":["Шашлык","Шаурма"],"r":4.7,"rc":"421","img":"f53ceefb48c4.webp","hours":"с 09:00 до 21:15","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, улица Карповича, 26Ак1","url":"https://eda.yandex.by/gomel/r/doner-siti_saslyk_saurma?placeSlug=donersiti_shashlyk_shaurma"}],"y":{"url":"https://eda.yandex.by/gomel/r/doner-siti_saslyk_saurma?placeSlug=donersiti_shashlyk_shaurma","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":13},{"n":"Драникъ","cz":["Белорусская","Блины","Салаты","Домашняя"],"r":4.7,"rc":"202","img":"beeafd41ff1c.webp","hours":"","areas":["Центр","Сельмаш","Волотова","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"улица Пушкина, 14","url":"https://eda.yandex.by/gomel/r/oltre?placeSlug=dranik"}],"y":{"url":"https://eda.yandex.by/gomel/r/oltre?placeSlug=dranik","own":true,"dc":"Доставка 7 р.. Бесплатно при заказе от 70 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29"]},"num":14},{"n":"Есць","cz":["Белорусская","Блины"],"r":4.9,"rc":"877","img":"4fbc05d06844.webp","hours":"с 10:00 до 20:30","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Речицкий проспект, 5В","url":"https://eda.yandex.by/gomel/r/esc?placeSlug=esc"}],"y":{"url":"https://eda.yandex.by/gomel/r/esc?placeSlug=esc","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":15},{"n":"Замковый","cz":["Европейская"],"r":4.9,"rc":"262","img":"c0cbb3c90a0d.webp","hours":"с 10:00 до 22:00","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, улица Гагарина, 6","url":"https://eda.yandex.by/gomel/r/zamkovyj?placeSlug=zamkovyj"}],"y":{"url":"https://eda.yandex.by/gomel/r/zamkovyj?placeSlug=zamkovyj","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":16},{"n":"Йети и Дети","cz":["Закуски","Пицца"],"r":null,"rc":null,"img":"6010a22a726c.webp","hours":"с 10:30 до 20:00","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, улица Гагарина, 65","url":"https://eda.yandex.by/gomel/r/kafe_jeti_i_deti_restaurant?placeSlug=kafe_jeti_i_deti"}],"y":{"url":"https://eda.yandex.by/gomel/r/kafe_jeti_i_deti_restaurant?placeSlug=kafe_jeti_i_deti","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":17},{"n":"Кайо","cz":["Суши"],"r":4.0,"rc":"24","img":"5987f746a7c9.webp","hours":"с 11:00 до 22:30","areas":["Центр","Сельмаш","Волотова","Мельников Луг","Север","Любенский"],"br":[{"a":"Белицкая улица, 34","url":"https://eda.yandex.by/gomel/r/kajo_restaurant?placeSlug=kajo_hq6d8"}],"y":{"url":"https://eda.yandex.by/gomel/r/kajo_restaurant?placeSlug=kajo_hq6d8","own":true,"dc":"Доставка 5 р. на заказ от 70 р.","min":50,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29"]},"num":18},{"n":"Кактус","cz":["Пицца","Бургеры","Фастфуд"],"r":4.9,"rc":"494","img":"139b30964693.webp","hours":"с 09:00 до 22:00","areas":["Центр","Сельмаш","Волотова","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, улица Каменщикова, 36","url":"https://eda.yandex.by/gomel/r/kaktus_lmeqp?placeSlug=kaktus_lmeqp"}],"y":{"url":"https://eda.yandex.by/gomel/r/kaktus_lmeqp?placeSlug=kaktus_lmeqp","own":true,"dc":"Бесплатно","min":35,"pr":["Подарок к заказу  — $ITEM_NAME$ при заказе от 37 без учёта доставки и работы сервиса","Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29"]},"num":19},{"n":"Капибара","cz":["Пицца","Суши","Японская"],"r":4.9,"rc":"75","img":"b2452c2a7667.webp","hours":"с 10:00 до 21:30","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"проспект Ленина, 33","url":"https://eda.yandex.by/gomel/r/kapibara_1656412726?placeSlug=kapibara_37ks9"}],"y":{"url":"https://eda.yandex.by/gomel/r/kapibara_1656412726?placeSlug=kapibara_37ks9","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":20},{"n":"Кебап Мастер","cz":["Шаурма","Фастфуд"],"r":4.5,"rc":"81","img":"077eaf5325c3.webp","hours":"с 10:30 до 20:50","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, улица Гагарина, 65","url":"https://eda.yandex.by/gomel/r/kebap_master?placeSlug=kebap_aster"},{"a":"проспект Ленина, 10","url":"https://eda.yandex.by/gomel/r/kebap_master?placeSlug=kebap_master"}],"y":{"url":"https://eda.yandex.by/gomel/r/kebap_master?placeSlug=kebap_aster","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":21},{"n":"Кондитерская Труханов","cz":["Десерты","Кондитерская"],"r":4.9,"rc":"76","img":"5639c311993f.webp","hours":"с 10:00 до 20:00","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"улица Барыкина, 78","url":"https://eda.yandex.by/gomel/r/kafe_konditerskaa_truhanov_restaurant_1764664013?placeSlug=kafe__konditerskaya_truxanov"},{"a":"улица Ильича, 85","url":"https://eda.yandex.by/gomel/r/kafe_konditerskaa_truhanov_restaurant_1764664013?placeSlug=kafe_konditerskaya_truxanov_lfm6b"}],"y":{"url":"https://eda.yandex.by/gomel/r/kafe_konditerskaa_truhanov_restaurant_1764664013?placeSlug=kafe__konditerskaya_truxanov","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":22},{"n":"Кофейня Айсберг","cz":["Кофейня","Кофе","Десерты"],"r":4.7,"rc":"134","img":"258258f17e67.webp","hours":"с 09:00 до 21:30","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"проспект Ленина, 18","url":"https://eda.yandex.by/gomel/r/kofejna_ajsberg?placeSlug=kofejnya_ajsberg"}],"y":{"url":"https://eda.yandex.by/gomel/r/kofejna_ajsberg?placeSlug=kofejnya_ajsberg","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":23},{"n":"КофеСаунд","cz":["Кофейня","Чай","Кофе"],"r":4.9,"rc":"40","img":"ad1b15c4da83.webp","hours":"с 10:00 до 21:30","areas":["Центр","Новобелица","Шведская горка","Мельников Луг","Южный","Любенский"],"br":[{"a":"улица Ильича, 333","url":"https://eda.yandex.by/gomel/r/kofesaund?placeSlug=kofesaund"}],"y":{"url":"https://eda.yandex.by/gomel/r/kofesaund?placeSlug=kofesaund","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":24},{"n":"Кулинарная лавка Бацькi","cz":["Пицца"],"r":4.7,"rc":"311","img":"d67bc89dd114.webp","hours":"с 11:00 до 21:30","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, улица М.Г. Ефремова, 19","url":"https://eda.yandex.by/gomel/r/kulinarnaa_lavka_bac_ki?placeSlug=kulinarnaya_lavka_bq48j"},{"a":"Беларусь, Гомель, улица Т.С. Бородина, 6А","url":"https://eda.yandex.by/gomel/r/kulinarnaa_lavka_bac_ki?placeSlug=kulinarnaya_lavka_backi"}],"y":{"url":"https://eda.yandex.by/gomel/r/kulinarnaa_lavka_bac_ki?placeSlug=kulinarnaya_lavka_bq48j","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":25},{"n":"Кунжут","cz":["Фастфуд","Салаты","Бургеры","Суши"],"r":4.8,"rc":"2701","img":"8a843708c718.webp","hours":"с 00:00 до 00:50; с 11:00 до 24:00","areas":["Центр","Сельмаш","Волотова","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"улица Киселёва, 3Г","url":"https://eda.yandex.by/gomel/r/kunzhut?placeSlug=kunzhut_ptbcj"}],"y":{"url":"https://eda.yandex.by/gomel/r/kunzhut?placeSlug=kunzhut_ptbcj","own":true,"dc":"Бесплатно","min":23,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29"]},"num":26},{"n":"Любимая шаверма","cz":["Фастфуд","Шаурма"],"r":4.8,"rc":"269","img":"7df05ad3e4ed.webp","hours":"с 10:00 до 20:45","areas":["Центр","Новобелица","Сельмаш","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"улица Григория Денисенко, 2","url":"https://eda.yandex.by/gomel/r/lyubimaya_shaverma?placeSlug=minikafe_lyubimaya_shaverma_"}],"y":{"url":"https://eda.yandex.by/gomel/r/lyubimaya_shaverma?placeSlug=minikafe_lyubimaya_shaverma_","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":27},{"n":"МАК Чикен","cz":["Шаурма","Фастфуд"],"r":4.2,"rc":"98","img":null,"hours":"с 10:00 до 21:00","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, улица Гагарина, 36","url":"https://eda.yandex.by/gomel/r/shaurma_ot_dushi_gomel?placeSlug=shaurma_ot_jr8nf"}],"y":{"url":"https://eda.yandex.by/gomel/r/shaurma_ot_dushi_gomel?placeSlug=shaurma_ot_jr8nf","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":28},{"n":"МАМА ДОМА","cz":["Домашняя","Блины"],"r":4.9,"rc":"2879","img":"3e5a034c683f.webp","hours":"с 10:00 до 20:30","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, улица Гагарина, 65","url":"https://eda.yandex.by/gomel/r/mama_doma_minsk?placeSlug=mama_doma_kpixs"}],"y":{"url":"https://eda.yandex.by/gomel/r/mama_doma_minsk?placeSlug=mama_doma_kpixs","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["–5% на ряд блюд — на любой заказ","Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":29},{"n":"Мама Хуана","cz":["Американская","Мексиканская","Бургеры","Салаты","Европейская"],"r":4.6,"rc":"297","img":"1f7b4759f2bb.webp","hours":"с 17:00 до 23:00","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, Советская улица, 29А","url":"https://eda.yandex.by/gomel/r/mama_xuana_by?placeSlug=mama_xuana"}],"y":{"url":"https://eda.yandex.by/gomel/r/mama_xuana_by?placeSlug=mama_xuana","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":30},{"n":"На чиле","cz":["Фастфуд","Поке","Пицца"],"r":3.7,"rc":"19","img":"4b9c6d85ddd3.webp","hours":"с 10:00 до 21:45","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Кооперативная улица, 30","url":"https://eda.yandex.by/gomel/r/na_cile?placeSlug=na_mvl3z"}],"y":{"url":"https://eda.yandex.by/gomel/r/na_cile?placeSlug=na_mvl3z","own":true,"dc":"Доставка 2-5 р.. Бесплатно при заказе от 70 р.","min":30,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29"]},"num":31},{"n":"Перец","cz":["Пицца","Суши","Шаурма"],"r":4.7,"rc":"299","img":"8d9656766d09.webp","hours":"с 12:00 до 22:30","areas":["Центр","Сельмаш","Волотова","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, Рогачёвская улица, 10","url":"https://eda.yandex.by/gomel/r/perec?placeSlug=perec_k2jgf"}],"y":{"url":"https://eda.yandex.by/gomel/r/perec?placeSlug=perec_k2jgf","own":true,"dc":"Доставка 5 р.. Бесплатно при заказе от 25 р.","min":15,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29"]},"num":32},{"n":"Пирамида","cz":["Фастфуд","Шаурма"],"r":4.0,"rc":"16","img":"03fe125c733c.webp","hours":"с 11:00 до 21:00","areas":["Центр","Новобелица","Мельников Луг","Южный"],"br":[{"a":"улица Оськина, 34","url":"https://eda.yandex.by/gomel/r/piramida_by?placeSlug=shaurma_piramida_"}],"y":{"url":"https://eda.yandex.by/gomel/r/piramida_by?placeSlug=shaurma_piramida_","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":33},{"n":"Пиццерия Dom","cz":["Итальянская","Закуски","Пицца"],"r":4.9,"rc":"13","img":"a845fde5bc0f.webp","hours":"с 11:00 до 21:30","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, проспект Ленина, 34","url":"https://eda.yandex.by/gomel/r/kafe-picceria_dom_restaurant?placeSlug=picceriya_dom"}],"y":{"url":"https://eda.yandex.by/gomel/r/kafe-picceria_dom_restaurant?placeSlug=picceriya_dom","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":34},{"n":"Пиццерия Италия","cz":["Салаты","Пицца"],"r":4.9,"rc":"689","img":"e53e4cc832f6.webp","hours":"с 11:00 до 22:00","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"улица Пушкина, 14","url":"https://eda.yandex.by/gomel/r/picceria_italia?placeSlug=picceriya_italiya_8hf9n"}],"y":{"url":"https://eda.yandex.by/gomel/r/picceria_italia?placeSlug=picceriya_italiya_8hf9n","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":35},{"n":"Пряности и радости","cz":["Грузинская","Пироги","Европейская"],"r":4.9,"rc":"372","img":"e69a9f30ac35.webp","hours":"с 12:00 до 21:30","areas":["Центр","Сельмаш","Волотова","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Комсомольская улица, 6","url":"https://eda.yandex.by/gomel/r/pryanosti_i_radosti_by?placeSlug=pryanosti_i_radosti_429wl"}],"y":{"url":"https://eda.yandex.by/gomel/r/pryanosti_i_radosti_by?placeSlug=pryanosti_i_radosti_429wl","own":true,"dc":"Доставка 5 р.. Бесплатно при заказе от 65 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29"]},"num":36},{"n":"Раз два пицца суши","cz":["Сэндвичи","Пицца","Шаурма","Суши","Паста"],"r":4.8,"rc":"1329","img":"e57e712e3596.webp","hours":"с 10:00 до 23:30","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский","Костюковка"],"br":[{"a":"улица Богдана Хмельницкого, 79","url":"https://eda.yandex.by/gomel/r/raz_dva_picca_susi_1695717437?placeSlug=raz_dva_picca_sushi"},{"a":"Советская улица, 97к5","url":"https://eda.yandex.by/gomel/r/raz_dva_picca_susi_1695717437?placeSlug=raz_dva_picca__sushi"},{"a":"Советская улица, 97к5","url":"https://eda.yandex.by/gomel/r/raz_dva_picca_susi_1695717437?placeSlug=raz_dva_picca_5j6dh"}],"y":{"url":"https://eda.yandex.by/gomel/r/raz_dva_picca_susi_1695717437?placeSlug=raz_dva_picca_sushi","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":37},{"n":"Рестар","cz":["Фастфуд","Пицца","Шаурма","Суши"],"r":4.5,"rc":"121","img":"9e16e62d35b3.webp","hours":"с 10:00 до 21:30","areas":["Центр","Новобелица","Сельмаш","Волотова","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, бульвар Газеты Гомельская Правда, 11","url":"https://eda.yandex.by/gomel/r/restar?placeSlug=restar"}],"y":{"url":"https://eda.yandex.by/gomel/r/restar?placeSlug=restar","own":true,"dc":"Доставка 5-9 р.. Бесплатно при заказе от 80 р.","min":10,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29"]},"num":38},{"n":"Скай","cz":["Фастфуд","Пицца"],"r":4.7,"rc":"65","img":"a4bdba2aff6c.webp","hours":"с 12:00 до 21:00","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Юбилейная улица, 9","url":"https://eda.yandex.by/gomel/r/skaj?placeSlug=skaj"}],"y":{"url":"https://eda.yandex.by/gomel/r/skaj?placeSlug=skaj","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":39},{"n":"Солянка","cz":["Пицца","Суши","Салаты","Десерты"],"r":4.8,"rc":"899","img":"82897c23c91c.webp","hours":"с 11:00 до 21:00","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, Привокзальная площадь, 1","url":"https://eda.yandex.by/gomel/r/solyanka_by?placeSlug=solyanka_thlzd"}],"y":{"url":"https://eda.yandex.by/gomel/r/solyanka_by?placeSlug=solyanka_thlzd","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":40},{"n":"Суши-бар Калифорния","cz":["Суши","Японская"],"r":4.8,"rc":"43","img":"b628dce37b4f.webp","hours":"с 11:00 до 21:30","areas":["Центр","Новобелица","Сельмаш","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Рабочая улица, 22","url":"https://eda.yandex.by/gomel/r/sushibar_kaliforniya_by?placeSlug=kaliforniya_"}],"y":{"url":"https://eda.yandex.by/gomel/r/sushibar_kaliforniya_by?placeSlug=kaliforniya_","own":true,"dc":"Бесплатно","min":35,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29"]},"num":41},{"n":"Сытый Лев","cz":["Японская","Пицца","Суши"],"r":4.8,"rc":"253","img":"d698f9d24a51.webp","hours":"с 11:00 до 22:30","areas":["Центр","Новобелица","Сельмаш","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"5-я Техническая улица, 1А","url":"https://eda.yandex.by/gomel/r/sytyj_lev_by?placeSlug=sytyj_lev_wfsdn"}],"y":{"url":"https://eda.yandex.by/gomel/r/sytyj_lev_by?placeSlug=sytyj_lev_wfsdn","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":42},{"n":"Тай","cz":["Паназиатская","Закуски","Суши","Салаты","Вок","Пицца"],"r":4.9,"rc":"272","img":"fba439046a9e.webp","hours":"с 10:00 до 21:30","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"проспект Ленина, 51","url":"https://eda.yandex.by/gomel/r/vok_dragon?placeSlug=vok__dragon"}],"y":{"url":"https://eda.yandex.by/gomel/r/vok_dragon?placeSlug=vok__dragon","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":43},{"n":"ТоДаСё","cz":["Фастфуд","Пицца","Бургеры","Шаурма","Суши"],"r":4.8,"rc":"1290","img":"4bbb47bfcfc8.webp","hours":"с 10:00 до 21:50","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, Интернациональная улица, 8/2","url":"https://eda.yandex.by/gomel/r/todase?placeSlug=shaurma_burger_1_zjnop"}],"y":{"url":"https://eda.yandex.by/gomel/r/todase?placeSlug=shaurma_burger_1_zjnop","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":44},{"n":"ТоДаСё на Севастопольском","cz":["Фастфуд","Хот-доги","Бургеры","Пицца","Шаурма","Суши"],"r":4.7,"rc":"203","img":"d25441c60394.webp","hours":"с 09:00 до 20:45","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, 1-й Севастопольский переулок, 49","url":"https://eda.yandex.by/gomel/r/todasyo_by?placeSlug=todasyo__dsrjv"}],"y":{"url":"https://eda.yandex.by/gomel/r/todasyo_by?placeSlug=todasyo__dsrjv","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":45},{"n":"Три кота","cz":["Шаурма","Пицца"],"r":4.9,"rc":"655","img":"fe9ff2472f89.webp","hours":"с 11:00 до 22:30","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"улица Карбышева, 9","url":"https://eda.yandex.by/gomel/r/tri_kota_l48rj?placeSlug=tri_kota_l48rj"}],"y":{"url":"https://eda.yandex.by/gomel/r/tri_kota_l48rj?placeSlug=tri_kota_l48rj","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":46},{"n":"ФаСоль","cz":["Европейская","Салаты","Десерты"],"r":4.9,"rc":"1899","img":"2bc5fe2a3c77.webp","hours":"с 12:00 до 22:30","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Советская улица, 36","url":"https://eda.yandex.by/gomel/r/fasol_by?placeSlug=fasol_ymdof"}],"y":{"url":"https://eda.yandex.by/gomel/r/fasol_by?placeSlug=fasol_ymdof","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":47},{"n":"Чайхана","cz":["Суши","Пицца","Шашлык","Супы","Плов","Шаурма","Салаты"],"r":4.7,"rc":"669","img":"6734b14df0be.webp","hours":"с 12:00 до 24:00","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"улица Киселёва, 5","url":"https://eda.yandex.by/gomel/r/chajxana_by?placeSlug=chajxana__9jhvq"}],"y":{"url":"https://eda.yandex.by/gomel/r/chajxana_by?placeSlug=chajxana__9jhvq","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":48},{"n":"Чисто Победы-1","cz":["Пицца"],"r":4.9,"rc":"885","img":"db4549dc5b4a.webp","hours":"с 09:00 до 22:30","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, проспект Победы, 1","url":"https://eda.yandex.by/gomel/r/chisto_pobedy1_by?placeSlug=chisto_pobedy1"}],"y":{"url":"https://eda.yandex.by/gomel/r/chisto_pobedy1_by?placeSlug=chisto_pobedy1","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":49},{"n":"Шава Бай на Карповича","cz":["Фастфуд","Шаурма"],"r":4.6,"rc":"130","img":"20ef91896c65.webp","hours":"с 11:00 до 17:20","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, улица Карповича, 22","url":"https://eda.yandex.by/gomel/r/sava_baj_restaurant?placeSlug=shava_baj_8nbmz"}],"y":{"url":"https://eda.yandex.by/gomel/r/sava_baj_restaurant?placeSlug=shava_baj_8nbmz","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Подарок к заказу  — $ITEM_NAME$ при заказе от 26 без учёта доставки и работы сервиса","Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":50},{"n":"Шауroom","cz":["Фастфуд","Шаурма"],"r":4.8,"rc":"444","img":"5ad96ca2b47e.webp","hours":"с 10:30 до 22:55","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"улица Богдана Хмельницкого, 80А","url":"https://eda.yandex.by/gomel/r/shauroom_7r3xl?placeSlug=shauroom_cx4rk"}],"y":{"url":"https://eda.yandex.by/gomel/r/shauroom_7r3xl?placeSlug=shauroom_cx4rk","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":51},{"n":"Шаурма бургер №1 Пенязькова 31","cz":["Фастфуд","Шаурма","Бургеры","Хот-доги"],"r":4.9,"rc":"796","img":"4bbb47bfcfc8.webp","hours":"с 10:00 до 21:45","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"улица Д.Н. Пенязькова, 31","url":"https://eda.yandex.by/gomel/r/saurma_burger_1?placeSlug=shaurma_burger_1_fn4kz"}],"y":{"url":"https://eda.yandex.by/gomel/r/saurma_burger_1?placeSlug=shaurma_burger_1_fn4kz","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":52},{"n":"Шаурма и Точка","cz":["Фастфуд","Шаурма"],"r":4.6,"rc":"2392","img":"2ad66c6e0cac.webp","hours":"с 09:00 до 21:00","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, улица Карповича, 26А","url":"https://eda.yandex.by/gomel/r/kulsava?placeSlug=kulshava"}],"y":{"url":"https://eda.yandex.by/gomel/r/kulsava?placeSlug=kulshava","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Подарок к заказу  — $ITEM_NAME$ при заказе от 27 без учёта доставки и работы сервиса","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":53},{"n":"Шаурма и точка на Советской","cz":["Фастфуд","Шаурма"],"r":4.5,"rc":"1141","img":"071b8ed2d158.webp","hours":"с 10:00 до 22:00","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, Гомель, Советская улица, 2","url":"https://eda.yandex.by/gomel/r/siti_saurma_hot_dog?placeSlug=siti_shaurma__xot_dog"}],"y":{"url":"https://eda.yandex.by/gomel/r/siti_saurma_hot_dog?placeSlug=siti_shaurma__xot_dog","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Подарок к заказу  — $ITEM_NAME$ при заказе от 24 без учёта доставки и работы сервиса","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":54},{"n":"Шаурма привокзальная","cz":["Фастфуд","Шаурма"],"r":null,"rc":null,"img":"fe3a5f3b6304.webp","hours":"с 09:30 до 16:30","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"улица Шевченко, 9Б","url":"https://eda.yandex.by/gomel/r/saurma_privokzal_naa_restaurant?placeSlug=shaurma_privokzalnaya_"}],"y":{"url":"https://eda.yandex.by/gomel/r/saurma_privokzal_naa_restaurant?placeSlug=shaurma_privokzalnaya_","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":55},{"n":"Экзюпери","cz":["Блины"],"r":4.9,"rc":"1579","img":"ebb8a23c9dfd.webp","hours":"с 09:00 до 22:00","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, Советская улица, 12","url":"https://eda.yandex.by/gomel/r/ekzyuperi_by?placeSlug=ekzyuperi"}],"y":{"url":"https://eda.yandex.by/gomel/r/ekzyuperi_by?placeSlug=ekzyuperi","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":56},{"n":"Этна","cz":["Пицца","Пироги","Суши"],"r":5.0,"rc":"524","img":"341cbc7476e2.webp","hours":"с 10:30 до 23:00","areas":["Центр","Сельмаш","Волотова","Мельников Луг","Южный","Север","Любенский","Костюковка"],"br":[{"a":"Ирининская улица, 6","url":"https://eda.yandex.by/gomel/r/etna?placeSlug=etna_"}],"y":{"url":"https://eda.yandex.by/gomel/r/etna?placeSlug=etna_","own":true,"dc":"Бесплатно","min":25,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29"]},"num":57},{"n":"69 Суши Пицца","cz":["Шаурма","Пицца","Суши"],"r":4.8,"rc":"140","img":"f5247f3cb557.webp","hours":"с 10:00 до 22:00","areas":["Центр","Сельмаш","Волотова","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Рабочая улица, 22","url":"https://eda.yandex.by/gomel/r/69_slug?placeSlug=69sushipicca"}],"y":{"url":"https://eda.yandex.by/gomel/r/69_slug?placeSlug=69sushipicca","own":true,"dc":"Доставка 4 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29"]},"num":58},{"n":"Barbq","cz":["Шаурма","Фастфуд","Пицца"],"r":4.7,"rc":"79","img":"8be51981ede7.webp","hours":"с 10:00 до 21:00","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Ленинградская улица, 15","url":"https://eda.yandex.by/gomel/r/barij_by?placeSlug=barbq_89plg"},{"a":"улица Ильича, 87А","url":"https://eda.yandex.by/gomel/r/barij_by?placeSlug=barbq_6zc7d"}],"y":{"url":"https://eda.yandex.by/gomel/r/barij_by?placeSlug=barbq_89plg","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":59},{"n":"Burger King","cz":["Фастфуд","Американская","Бургеры","Кофе"],"r":4.8,"rc":"3189","img":"24dbcb43f767.webp","hours":"с 09:00 до 22:30","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Привокзальная площадь, 1","url":"https://eda.yandex.by/gomel/r/burger_king?placeSlug=burger_king_uswmp"},{"a":"Речицкий проспект, 5В","url":"https://eda.yandex.by/gomel/r/burger_king?placeSlug=burger_king_9qjbn"},{"a":"улица Хатаевича, 9","url":"https://eda.yandex.by/gomel/r/burger_king?placeSlug=burger_king_gfd24"}],"y":{"url":"https://eda.yandex.by/gomel/r/burger_king?placeSlug=burger_king_uswmp","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["–40% на ряд блюд — на любой заказ","–30% на ряд блюд — на любой заказ","–25% на ряд блюд — на любой заказ","–20% на ряд блюд — на любой заказ","Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":60},{"n":"Cyberx арена","cz":["Фастфуд","Бургеры"],"r":null,"rc":null,"img":"002ecfe06d79.webp","hours":"с 12:00 до 22:30","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Интернациональная улица, 13","url":"https://eda.yandex.by/gomel/r/cyberx_gomel?placeSlug=cyberx_gomel"}],"y":{"url":"https://eda.yandex.by/gomel/r/cyberx_gomel?placeSlug=cyberx_gomel","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":61},{"n":"Doner Duck","cz":["Фастфуд","Шаурма"],"r":4.8,"rc":"147","img":"7df05ad3e4ed.webp","hours":"с 09:00 до 20:45","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"улица Гагарина, 36","url":"https://eda.yandex.by/gomel/r/doner_dak?placeSlug=doner_duck_fzqdm"},{"a":"Советская улица, 97","url":"https://eda.yandex.by/gomel/r/doner_dak?placeSlug=doner_duck_x8b9c"},{"a":"Беларусь, Гомель, Речицкий проспект, 5В","url":"https://eda.yandex.by/gomel/r/doner_dak?placeSlug=tvoya_lyubimaya_shaverma_w76gn"},{"a":"улица Героев Подпольщиков, 18","url":"https://eda.yandex.by/gomel/r/doner_dak?placeSlug=lyubimaya_shaverma_nj7q6"},{"a":"Беларусь, Гомель, улица Хатаевича, 5","url":"https://eda.yandex.by/gomel/r/doner_dak?placeSlug=tvoya_lyubimaya_shaverma_"},{"a":"Беларусь, Гомель, Привокзальная площадь, 3А","url":"https://eda.yandex.by/gomel/r/doner_dak?placeSlug=doner_duck_"}],"y":{"url":"https://eda.yandex.by/gomel/r/doner_dak?placeSlug=doner_duck_fzqdm","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":62},{"n":"FlaminGO sushi","cz":["Суши"],"r":4.9,"rc":"184","img":"3263d5c6e126.webp","hours":"с 11:00 до 22:00","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"улица Карбышева, 9","url":"https://eda.yandex.by/gomel/r/flamingo_sushi?placeSlug=flamingo_sushi"}],"y":{"url":"https://eda.yandex.by/gomel/r/flamingo_sushi?placeSlug=flamingo_sushi","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":63},{"n":"GARAGE Food & Coffee","cz":["Европейская","Завтраки","Кофе","Пицца","Детское меню","Салаты","Десерты"],"r":4.8,"rc":"722","img":"cffcceb4c993.webp","hours":"с 10:00 до 21:30","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, Речицкий проспект, 5В","url":"https://eda.yandex.by/gomel/r/garage_food_coffee_1624953762?placeSlug=garage_gauyp"}],"y":{"url":"https://eda.yandex.by/gomel/r/garage_food_coffee_1624953762?placeSlug=garage_gauyp","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["-20% на ряд блюд — на любой заказ","Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":64},{"n":"Golfstream","cz":["Европейская","Детское меню"],"r":4.8,"rc":"164","img":"22e6dc336885.webp","hours":"с 09:00 до 19:30","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"микрорайон Приозёрный, 18-й микрорайон, бульвар Газеты Гомельская Правда, 32","url":"https://eda.yandex.by/gomel/r/golfstream?placeSlug=kafe_golfstream"}],"y":{"url":"https://eda.yandex.by/gomel/r/golfstream?placeSlug=kafe_golfstream","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":65},{"n":"Kinza","cz":["Фастфуд","Закуски","Узбекская","Шаурма"],"r":4.9,"rc":"288","img":"2dfee0aff639.webp","hours":"с 11:00 до 21:00","areas":["Центр","Новобелица","Шведская горка","Мельников Луг","Южный","Любенский"],"br":[{"a":"Беларусь, Гомель, улица Ильича, 333","url":"https://eda.yandex.by/gomel/r/kinza_by?placeSlug=kinza_4j63c"}],"y":{"url":"https://eda.yandex.by/gomel/r/kinza_by?placeSlug=kinza_4j63c","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":66},{"n":"Ko–Ko Doner","cz":["Фастфуд","Шаурма"],"r":4.8,"rc":"1706","img":"a4ddb8c371e0.webp","hours":"с 10:00 до 20:50","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Озёрная улица, 56","url":"https://eda.yandex.by/gomel/r/ko-ko_doner_1737377842?placeSlug=koko_doner"}],"y":{"url":"https://eda.yandex.by/gomel/r/ko-ko_doner_1737377842?placeSlug=koko_doner","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":67},{"n":"Le Cafe","cz":["Десерты","Выпечка"],"r":4.5,"rc":"90","img":"4447d1645852.webp","hours":"с 09:00 до 23:00","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, проспект Ленина, 29А","url":"https://eda.yandex.by/gomel/r/le_cafe_by?placeSlug=provanskaya_kofejnya"}],"y":{"url":"https://eda.yandex.by/gomel/r/le_cafe_by?placeSlug=provanskaya_kofejnya","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":68},{"n":"Mak.by","cz":["Фастфуд","Завтраки","Бургеры","Кофе","Американская","Десерты"],"r":4.9,"rc":"15915","img":"adfac4cd47f2.webp","hours":"с 00:00 до 00:00; с 08:00 до 24:00","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, Советская улица, 68","url":"https://eda.yandex.by/gomel/r/mak_by_rb?placeSlug=ksbv_dpugh"}],"y":{"url":"https://eda.yandex.by/gomel/r/mak_by_rb?placeSlug=ksbv_dpugh","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Подарок к заказу  — $ITEM_NAME$ при заказе от 25 без учёта доставки и работы сервиса","Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":69},{"n":"Pad Thai","cz":["Паназиатская","Супы","Вок","Поке"],"r":4.9,"rc":"3200","img":"b41fbfdd5e4a.webp","hours":"с 10:00 до 20:45","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"улица Гагарина, 65","url":"https://eda.yandex.by/gomel/r/pad_thai_rb?placeSlug=pad_thai_9dv25"}],"y":{"url":"https://eda.yandex.by/gomel/r/pad_thai_rb?placeSlug=pad_thai_9dv25","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Подарок к заказу  — $ITEM_NAME$ при заказе от 45 без учёта доставки и работы сервиса","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":70},{"n":"Pizzburg","cz":["Фастфуд","Пицца","Бургеры"],"r":4.7,"rc":"293","img":"2544d730fbfe.webp","hours":"с 11:00 до 21:30","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, улица Кожара, 6А","url":"https://eda.yandex.by/gomel/r/pizzburg_by?placeSlug=pizzburg_nkdyb"}],"y":{"url":"https://eda.yandex.by/gomel/r/pizzburg_by?placeSlug=pizzburg_nkdyb","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":71},{"n":"PON-PUSHKA","cz":["Десерты"],"r":4.9,"rc":"343","img":"cbcd8c853dcc.webp","hours":"с 10:00 до 20:30","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"улица Гагарина, 65","url":"https://eda.yandex.by/gomel/r/pon-pushka?placeSlug=ponpushka_hw3j9"}],"y":{"url":"https://eda.yandex.by/gomel/r/pon-pushka?placeSlug=ponpushka_hw3j9","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":72},{"n":"Rasskazov","cz":["Европейская","Пицца","Салаты","Вок"],"r":4.7,"rc":"187","img":"b3b6574fe5ea.webp","hours":"с 12:00 до 22:30","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, улица Кирова, 90А","url":"https://eda.yandex.by/gomel/r/rasskazov?placeSlug=rasskazov"}],"y":{"url":"https://eda.yandex.by/gomel/r/rasskazov?placeSlug=rasskazov","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":73},{"n":"SozhskiHub","cz":["Фастфуд","Бургеры"],"r":4.6,"rc":"83","img":"480fb401388a.webp","hours":"","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, Подгорная улица, 10Г","url":"https://eda.yandex.by/gomel/r/sozhskihub?placeSlug=sozhskihub"}],"y":{"url":"https://eda.yandex.by/gomel/r/sozhskihub?placeSlug=sozhskihub","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":74},{"n":"Station One","cz":["Европейская","Пицца"],"r":4.4,"rc":"114","img":"263f5921c606.webp","hours":"с 12:00 до 23:00","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, Советская улица, 29А","url":"https://eda.yandex.by/gomel/r/station_one?placeSlug=station_one"}],"y":{"url":"https://eda.yandex.by/gomel/r/station_one?placeSlug=station_one","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":75},{"n":"SuSuTea","cz":["Кофейня","Кофе"],"r":4.9,"rc":"695","img":"3df877edd20a.webp","hours":"с 11:00 до 21:00","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Рогачёвская улица, 2А","url":"https://eda.yandex.by/gomel/r/susutea?placeSlug=susutea"}],"y":{"url":"https://eda.yandex.by/gomel/r/susutea?placeSlug=susutea","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 11 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":76},{"n":"TABU","cz":["Японская","Суши"],"r":4.9,"rc":"1159","img":"ddda2d348c5e.webp","hours":"с 12:00 до 22:30","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Беларусь, Гомель, Советская улица, 12","url":"https://eda.yandex.by/gomel/r/tabu_by?placeSlug=taboo"}],"y":{"url":"https://eda.yandex.by/gomel/r/tabu_by?placeSlug=taboo","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":77},{"n":"The Box 99","cz":["Японская","Фастфуд","Пицца","Суши"],"r":4.9,"rc":"607","img":"c5610bb0504b.webp","hours":"с 10:30 до 22:30","areas":["Центр","Новобелица","Сельмаш","Волотова","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"улица Билецкого, 2","url":"https://eda.yandex.by/gomel/r/the_box_99?placeSlug=the_box_99"}],"y":{"url":"https://eda.yandex.by/gomel/r/the_box_99?placeSlug=the_box_99","own":true,"dc":"Бесплатно","min":25,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29"]},"num":78},{"n":"UMI","cz":["Японская","Паназиатская","Суши","Завтраки"],"r":4.9,"rc":"107","img":"bb1c3ffd3b4f.webp","hours":"с 12:00 до 22:30","areas":["Центр","Новобелица","Сельмаш","Волотова","Шведская горка","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"улица Кирова, 35","url":"https://eda.yandex.by/gomel/r/restoran_umi_restaurant?placeSlug=restoran_umi"}],"y":{"url":"https://eda.yandex.by/gomel/r/restoran_umi_restaurant?placeSlug=restoran_umi","own":false,"dc":"Бесплатно при заказе от 15 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29","Бесплатная доставка — действует на первый заказ от 15 руб."]},"num":79},{"n":"Yasai","cz":["Суши"],"r":4.9,"rc":"65","img":"38b050c19278.webp","hours":"с 15:00 до 23:00","areas":["Центр","Новобелица","Сельмаш","Волотова","Мельников Луг","Южный","Север","Любенский","Костюковка"],"br":[{"a":"улица Царикова, 57В","url":"https://eda.yandex.by/gomel/r/yasai_restaurant?placeSlug=yasai"}],"y":{"url":"https://eda.yandex.by/gomel/r/yasai_restaurant?placeSlug=yasai","own":true,"dc":"Бесплатно","min":30,"pr":["–20% на ряд блюд — на любой заказ","–10% на ряд блюд — на любой заказ","Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29"]},"num":80},{"n":"Yobidoyobi","cz":["Японская","Суши"],"r":4.8,"rc":"1003","img":"5a813dd0a2ec.webp","hours":"с 11:00 до 22:50","areas":["Центр","Новобелица","Сельмаш","Волотова","Мельников Луг","Южный","Север","Любенский"],"br":[{"a":"Крестьянская улица, 29","url":"https://eda.yandex.by/gomel/r/yo_sushi_i_rolly_by?placeSlug=e_sushi_i_rolly"}],"y":{"url":"https://eda.yandex.by/gomel/r/yo_sushi_i_rolly_by?placeSlug=e_sushi_i_rolly","own":true,"dc":"Доставка 3 р. на заказ от 30 р.","min":0,"pr":["Скидка 17 р. BYN — с промокодом EDA17 на заказ от 29"]},"num":81}],"aggregators":[]}</script>
+<script>
+(() => {
+  const D = JSON.parse(document.getElementById('data').textContent);
+  const P = D.places;
+  const $ = (s, r = document) => r.querySelector(s);
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const safeUrl = u => /^https?:\/\//i.test(u || '') ? u : null;
+  const pad = n => String(n).padStart(3, '0');
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const store = {
+    get(k, d) { try { const v = localStorage.getItem('lt:' + k); return v ? JSON.parse(v) : d; } catch { return d; } },
+    set(k, v) { try { localStorage.setItem('lt:' + k, JSON.stringify(v)); } catch { } }
+  };
+
+  /* ---------- cuisine groups ---------- */
+  const GROUPS = [
+    ['pizza', 'Пицца', ['пицц']],
+    ['sushi', 'Суши', ['суши', 'япон', 'поке', 'ролл']],
+    ['shawarma', 'Шаурма', ['шаурм', 'шаверм', 'шашлык', 'хот-дог', 'донер', 'кебаб']],
+    ['burger', 'Бургеры', ['бургер', 'американ', 'сэндвич']],
+    ['fast', 'Фастфуд', ['фастфуд']],
+    ['asia', 'Азия', ['паназиат', 'вок', 'азиат', 'тайск', 'китай']],
+    ['home', 'Домашняя', ['домашн', 'белорус', 'блин', 'пельмен', 'суп', 'ланч', 'пирог', 'плов', 'узбек', 'грузин']],
+    ['euro', 'Европа', ['европ', 'италь', 'паст', 'мексик', 'салат']],
+    ['sweet', 'Десерты и кофе', ['десерт', 'кофе', 'кондитер', 'выпеч', 'чай', 'завтрак']],
+  ];
+  P.forEach(p => {
+    const t = p.cz.join(' ').toLowerCase() + ' ' + p.n.toLowerCase();
+    p.groups = GROUPS.filter(g => g[2].some(k => t.includes(k))).map(g => g[0]);
+  });
+
+  /* ---------- hours ---------- */
+  const RANGE = /(\d{1,2})[:.](\d{2})\s*(?:до|–|—|-)\s*(\d{1,2})[:.](\d{2})/g;
+  function ranges(s) {
+    return [...String(s || '').matchAll(RANGE)].map(m => [(+m[1]) * 60 + (+m[2]), (+m[3]) * 60 + (+m[4])]).filter(([a, b]) => a !== b);
+  }
+  function fmtHours(s) {
+    if (!s) return '';
+    if (/круглосуточ/i.test(s)) return 'круглосуточно';
+    let rs = ranges(s);
+    if (!rs.length) return s;
+    const early = rs.find(r => r[0] === 0), late = rs.find(r => r[1] === 1440);
+    if (early && late && early !== late) rs = rs.filter(r => r !== early && r !== late).concat([[late[0], early[1]]]);
+    const hm = m => { m %= 1440; return String(Math.floor(m / 60)).padStart(2, '0') + ':' + String(m % 60).padStart(2, '0'); };
+    return rs.map(([a, b]) => hm(a) + '–' + hm(b)).join(', ');
+  }
+  function minskNow() {
+    try {
+      const s = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Minsk', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).format(new Date());
+      const [h, m] = s.split(':').map(Number); return h * 60 + m;
+    } catch { const d = new Date(); return d.getHours() * 60 + d.getMinutes(); }
+  }
+  function isOpen(p) {
+    const s = p.hours;
+    if (!s) return null;
+    if (/круглосуточ/i.test(s)) return true;
+    const rs = ranges(s); if (!rs.length) return null;
+    const t = minskNow();
+    return rs.some(([a, b]) => { if (b <= a) b += 1440; return (t >= a && t < b) || (t + 1440 >= a && t + 1440 < b); });
+  }
+
+  /* ---------- promo parsing ---------- */
+  function parsePromo(s) {
+    let m;
+    if ((m = s.match(/[–-]\s?(\d+)%\s*на ряд блюд/))) return { kind: 'dish', pct: +m[1], text: `−${m[1]}% на ряд блюд` };
+    if ((m = s.match(/промокод\S*\s+([A-Z0-9]+)/i))) {
+      const amt = (s.match(/(\d+)\s*р/) || [])[1];
+      const from = (s.match(/от\s+(\d+)/) || [])[1];
+      return { kind: 'code', code: m[1].toUpperCase(), amt: amt ? +amt : null, from: from ? +from : null, text: s };
+    }
+    if (/Бесплатная доставка/i.test(s)) return { kind: 'freeship', text: s };
+    if (/Подарок/i.test(s)) { const from = (s.match(/от\s+(\d+)/) || [])[1]; return { kind: 'gift', from: from ? +from : null, text: `Подарок к заказу от ${from} р.` }; }
+    return { kind: 'other', text: s };
+  }
+  P.forEach(p => {
+    p.yp = (p.y?.pr || []).map(parsePromo);
+    p.maxPct = Math.max(0, ...p.yp.filter(x => x.kind === 'dish').map(x => x.pct));
+    p.hasSale = p.maxPct > 0 || p.yp.some(x => x.kind === 'gift') || (p.o?.pr || []).length > 0;
+  });
+
+  function deliveryText(p) {
+    if (!p.y) return p.o?.dl || 'уточняйте на сайте';
+    const dc = (p.y.dc || '').replace(/р\.\./g, 'р.');
+    if (p.y.own) return dc + (p.y.min ? `, заказ от ${p.y.min} р.` : '');
+    return 'Первый заказ — бесплатно от 15 р., дальше по тарифу Яндекса';
+  }
+
+  function verdictOf(p) {
+    if (!p.y) return { v: 'own', label: 'Только напрямую' };
+    if (!p.o) return { v: 'yandex', label: 'Только Яндекс Еда', none: true };
+    return { v: p.o.v || 'unknown', label: { own: 'Напрямую выгоднее', yandex: 'Яндекс Еда выгоднее', same: 'Примерно одинаково', unknown: 'Нет данных' }[p.o.v || 'unknown'] };
+  }
+  function orderTargets(p) {
+    const y = p.y && { url: p.y.url, label: 'Яндекс Еда' };
+    const o = p.o && safeUrl(p.o.url) && { url: p.o.url, label: 'Сайт заведения' };
+    if (p.o?.v === 'own' && o) return [o, y].filter(Boolean);
+    return [y || o, y && o ? o : null].filter(Boolean);
+  }
+
+  /* ---------- tabs ---------- */
+  const TABS = ['draw', 'promo', 'compare', 'all'];
+  function showTab(id, push) {
+    if (!TABS.includes(id)) id = 'draw';
+    TABS.forEach(t => {
+      $('#' + t).hidden = t !== id;
+      $('#tab-' + t).setAttribute('aria-selected', t === id);
+    });
+    if (push) { try { history.replaceState(null, '', '#' + id); } catch { } }
+    drumActive = id === 'draw';
+    if (drumActive) kick();
+  }
+  TABS.forEach(t => $('#tab-' + t).addEventListener('click', () => showTab(t, true)));
+
+  /* ---------- filters ---------- */
+  const F = Object.assign({ groups: [], open: false, sale: false, top: false, area: '' }, store.get('filters', {}));
+  const cz = $('#cuisines');
+  cz.innerHTML = GROUPS.map(([k, name]) => `<button class="chip" data-g="${k}" aria-pressed="${F.groups.includes(k)}">${name} <small>${P.filter(p => p.groups.includes(k)).length}</small></button>`).join('');
+  cz.addEventListener('click', e => {
+    const b = e.target.closest('.chip'); if (!b) return;
+    const k = b.dataset.g; F.groups = F.groups.includes(k) ? F.groups.filter(x => x !== k) : F.groups.concat(k);
+    b.setAttribute('aria-pressed', F.groups.includes(k)); onFilter();
+  });
+  const areas = [...new Set(P.flatMap(p => p.areas || []))];
+  const areaOrder = D.areas.filter(a => areas.includes(a));
+  $('#f-area').insertAdjacentHTML('beforeend', areaOrder.map(a => `<option>${esc(a)}</option>`).join(''));
+  [['f-open', 'open'], ['f-sale', 'sale'], ['f-top', 'top']].forEach(([id, k]) => {
+    const el = $('#' + id); el.checked = !!F[k]; el.addEventListener('change', () => { F[k] = el.checked; onFilter(); });
+  });
+  const areaSel = $('#f-area'); areaSel.value = F.area || ''; areaSel.addEventListener('change', () => { F.area = areaSel.value; onFilter(); });
+
+  function pool() {
+    return P.filter(p =>
+      (!F.groups.length || F.groups.some(g => p.groups.includes(g))) &&
+      (!F.open || isOpen(p) !== false) &&
+      (!F.sale || p.hasSale) &&
+      (!F.top || (p.r || 0) >= 4.8) &&
+      (!F.area || !p.areas || !p.areas.length || p.areas.includes(F.area)));
+  }
+  function onFilter() {
+    store.set('filters', F);
+    const n = pool().length;
+    $('#pool').innerHTML = n ? `В барабане <b>${n}</b> ${plural(n, 'заведение', 'заведения', 'заведений')}` : 'Под эти фильтры ничего не подходит — снимите один из них';
+    $('#spin').disabled = !n;
+    fillBalls();
+  }
+  function plural(n, a, b, c) { const m10 = n % 10, m100 = n % 100; return m10 === 1 && m100 !== 11 ? a : (m10 >= 2 && m10 <= 4 && (m100 < 10 || m100 >= 20) ? b : c); }
+
+  /* ---------- ticket ---------- */
+  let hist = store.get('hist', []).filter(n => P.some(p => p.num === n));
+  function renderTicket(p, animate) {
+    const open = isOpen(p);
+    const pill = open === null ? '' : `<span class="pill ${open ? 'open' : 'closed'}">${open ? 'открыто' : 'закрыто'}</span>`;
+    const promos = [
+      ...p.yp.filter(x => x.kind === 'dish').sort((a, b) => b.pct - a.pct).slice(0, 1).map(x => `<li>до −${x.pct}% на блюда</li>`),
+      ...p.yp.filter(x => x.kind === 'gift').slice(0, 1).map(x => `<li>${esc(x.text)}</li>`),
+      ...p.yp.filter(x => x.kind === 'code').slice(0, 1).map(x => `<li>${esc(x.code)}: −${x.amt} р. от ${x.from} р.</li>`),
+      ...(p.o?.pr || []).slice(0, 2).map(s => `<li class="own">${esc(s)}</li>`),
+    ].join('');
+    const vd = verdictOf(p);
+    const verdict = p.o && p.y ? `<p class="verdict"><b>${esc(vd.label)}.</b> ${esc(p.o.why || '')}</p>` : '';
+    const br = p.br || [];
+    const addr = br.length > 1
+      ? `<ul class="branches">${br.map(b => `<li><a href="${esc(b.url)}" target="_blank" rel="noopener">${esc(b.a)}</a></li>`).join('')}</ul>`
+      : esc(br[0]?.a || p.addr || '');
+    const [primary, secondary] = orderTargets(p);
+    const el = $('#ticket');
+    el.innerHTML = `
+      <div class="t-main">
+        <div class="t-head"><span class="label">Тираж · ${esc(D.dateHuman)}</span><span class="no">СЕРИЯ ГМЛ № ${pad(p.num)}</span></div>
+        <div class="t-body">
+          <div class="t-img">${p.img ? `<img src="img/${esc(p.img)}" alt="">` : `<div class="t-ph">${esc(p.n[0])}</div>`}</div>
+          <div style="min-width:0">
+            <h2 class="t-name">${esc(p.n)}</h2>
+            <p class="t-cz">${esc(p.cz.slice(0, 4).join(' · '))}</p>
+          </div>
+        </div>
+        <dl class="facts">
+          <div><dt>Рейтинг</dt><dd>${p.r ? `<span class="star">★</span> ${p.r} <span class="mono" style="color:var(--ink-2);font-size:13px">${p.rc ? '· ' + esc(p.rc) + ' оценок' : ''}</span>` : 'пока без оценок'}</dd></div>
+          <div><dt>Часы работы</dt><dd>${esc(fmtHours(p.hours) || 'уточняйте')}${pill}</dd></div>
+          <div class="wide"><dt>Доставка</dt><dd>${esc(deliveryText(p))}</dd></div>
+          ${addr ? `<div class="wide"><dt>${br.length > 1 ? 'Точки' : 'Адрес'}</dt><dd>${addr}</dd></div>` : ''}
+          ${p.o?.phone ? `<div class="wide"><dt>Телефон</dt><dd class="mono">${esc(p.o.phone)}</dd></div>` : ''}
+        </dl>
+        ${promos ? `<ul class="promos">${promos}</ul>` : ''}
+        ${verdict}
+      </div>
+      <div class="t-stub">
+        <div class="stub-num"><small>ВЫИГРЫШНЫЙ НОМЕР</small>${p.num}</div>
+        <div class="stub-actions">
+          ${primary ? `<a class="btn-order" href="${esc(primary.url)}" target="_blank" rel="noopener">Оформить заказ <span>${esc(primary.label)} — откроется меню</span></a>` : ''}
+          ${secondary ? `<a class="btn-alt" href="${esc(secondary.url)}" target="_blank" rel="noopener">${esc(secondary.label)}</a>` : ''}
+          <button class="btn-again" type="button" data-again>Не то — ещё раз</button>
+        </div>
+      </div>`;
+    if (animate && !reduceMotion) { el.classList.remove('pop'); void el.offsetWidth; el.classList.add('pop'); }
+    el.querySelector('[data-again]').addEventListener('click', spin);
+  }
+  function renderHistory() {
+    const box = $('#history');
+    box.hidden = hist.length < 2;
+    $('#history-chips').innerHTML = hist.slice(1, 9).map(n => { const p = P.find(x => x.num === n); return `<button class="chip" data-n="${n}"><b>${n}</b> ${esc(p.n)}</button>`; }).join('');
+  }
+  $('#history-chips').addEventListener('click', e => { const b = e.target.closest('[data-n]'); if (b) renderTicket(P.find(p => p.num === +b.dataset.n), true); });
+
+  function pick() {
+    const pl = pool(); if (!pl.length) return null;
+    const recent = new Set(hist.slice(0, Math.min(6, pl.length - 1)));
+    const cands = pl.filter(p => !recent.has(p.num));
+    const arr = cands.length ? cands : pl;
+    const buf = new Uint32Array(1); (crypto.getRandomValues ? crypto.getRandomValues(buf) : (buf[0] = Math.random() * 2 ** 32));
+    return arr[buf[0] % arr.length];
+  }
+  function commit(p, animate) {
+    hist = [p.num, ...hist.filter(n => n !== p.num)].slice(0, 12);
+    store.set('hist', hist);
+    renderTicket(p, animate); renderHistory();
+  }
+
+  /* ---------- drum ---------- */
+  const cv = $('#drum'), ctx = cv.getContext('2d');
+  let S = 300, R = 140, BR = 14, balls = [], omega = 0, rot = 0, spinningUntil = 0, winner = null, drumActive = true, raf = 0, last = 0, settle = 0;
+  let C = {};
+  function readColors() {
+    const cs = getComputedStyle(document.documentElement);
+    const g = k => cs.getPropertyValue(k).trim();
+    C = { ink: g('--ink'), ink2: g('--ink-2'), line: g('--line'), card: g('--card'), paper2: g('--paper-2'), balls: [g('--red'), g('--amber'), g('--blue'), g('--green')] };
+  }
+  function sizeDrum() {
+    const w = cv.parentElement.getBoundingClientRect().width || 300;
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    S = w; cv.width = Math.round(w * dpr); cv.height = Math.round(w * dpr); ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const oldR = R; R = S / 2 - 8; BR = Math.max(11, S / 21);
+    const k = R / oldR; balls.forEach(b => { b.x = S / 2 + (b.x - S / 2) * k; b.y = S / 2 + (b.y - S / 2) * k; });
+    kick();
+  }
+  function fillBalls() {
+    const pl = pool();
+    const sample = pl.slice().sort(() => Math.random() - .5).slice(0, 22);
+    const old = new Map(balls.map(b => [b.num, b]));
+    balls = sample.map((p, i) => old.get(p.num) || {
+      num: p.num, x: S / 2 + (Math.random() - .5) * R, y: S / 2 + R * .3 + Math.random() * R * .3, vx: (Math.random() - .5) * 60, vy: 0, c: i % 4,
+    });
+    kick();
+  }
+  function step(dt, now) {
+    const cx = S / 2, cy = S / 2, g = 1400, spinning = now < spinningUntil;
+    omega += ((spinning ? 7.5 : 0) - omega) * Math.min(1, dt * (spinning ? 2.2 : 1.4));
+    rot += omega * dt;
+    for (const b of balls) {
+      b.vy += g * dt;
+      if (spinning) { b.vx += (Math.random() - .5) * 900 * dt; b.vy += (Math.random() - .5) * 900 * dt; }
+      b.vx *= 1 - .25 * dt; b.vy *= 1 - .25 * dt;
+      b.x += b.vx * dt; b.y += b.vy * dt;
+      const dx = b.x - cx, dy = b.y - cy, d = Math.hypot(dx, dy) || 1, lim = R - BR - 3;
+      if (d > lim) {
+        const nx = dx / d, ny = dy / d;
+        b.x = cx + nx * lim; b.y = cy + ny * lim;
+        const vn = b.vx * nx + b.vy * ny;
+        if (vn > 0) { b.vx -= 1.55 * vn * nx; b.vy -= 1.55 * vn * ny; }
+        const tx = -ny, ty = nx, vt = b.vx * tx + b.vy * ty, ws = omega * lim;
+        const f = spinning ? .35 : .08;
+        b.vx += (ws - vt) * f * tx; b.vy += (ws - vt) * f * ty;
+      }
+    }
+    for (let i = 0; i < balls.length; i++) for (let j = i + 1; j < balls.length; j++) {
+      const a = balls[i], b = balls[j], dx = b.x - a.x, dy = b.y - a.y, d = Math.hypot(dx, dy), min = BR * 2;
+      if (d > 0 && d < min) {
+        const nx = dx / d, ny = dy / d, o = (min - d) / 2;
+        a.x -= nx * o; a.y -= ny * o; b.x += nx * o; b.y += ny * o;
+        const rv = (b.vx - a.vx) * nx + (b.vy - a.vy) * ny;
+        if (rv < 0) { const imp = -rv * .9; a.vx -= imp * nx; a.vy -= imp * ny; b.vx += imp * nx; b.vy += imp * ny; }
+      }
+    }
+  }
+  function draw() {
+    const cx = S / 2, cy = S / 2;
+    ctx.clearRect(0, 0, S, S);
+    ctx.save();
+    ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2);
+    ctx.fillStyle = C.card; ctx.fill();
+    ctx.lineWidth = 3; ctx.strokeStyle = C.ink; ctx.stroke();
+    ctx.beginPath(); ctx.arc(cx, cy, R - 7, 0, Math.PI * 2); ctx.lineWidth = 1; ctx.strokeStyle = C.line; ctx.stroke();
+    ctx.strokeStyle = C.line; ctx.lineWidth = 1.5;
+    for (let i = 0; i < 6; i++) {
+      const a = rot + i * Math.PI / 3;
+      ctx.beginPath(); ctx.moveTo(cx + Math.cos(a) * 14, cy + Math.sin(a) * 14); ctx.lineTo(cx + Math.cos(a) * (R - 7), cy + Math.sin(a) * (R - 7)); ctx.stroke();
+    }
+    ctx.beginPath(); ctx.arc(cx, cy, 10, 0, Math.PI * 2); ctx.fillStyle = C.ink; ctx.fill();
+    ctx.restore();
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    for (const b of balls) {
+      const col = C.balls[b.c];
+      ctx.beginPath(); ctx.arc(b.x, b.y, BR, 0, Math.PI * 2); ctx.fillStyle = col; ctx.fill();
+      ctx.beginPath(); ctx.arc(b.x, b.y, BR * .62, 0, Math.PI * 2); ctx.fillStyle = '#FFFFFF'; ctx.fill();
+      ctx.fillStyle = '#18244A';
+      ctx.font = `700 ${Math.round(BR * (b.num > 99 ? .58 : .72))}px "JetBrains Mono", ui-monospace, monospace`;
+      ctx.fillText(b.num, b.x, b.y + .5);
+      if (winner === b.num) { ctx.beginPath(); ctx.arc(b.x, b.y, BR + 4, 0, Math.PI * 2); ctx.lineWidth = 3; ctx.strokeStyle = C.ink; ctx.stroke(); }
+    }
+  }
+  function loop(now) {
+    raf = 0;
+    const dt = Math.min(.033, (now - (last || now)) / 1000); last = now;
+    const sub = 3; for (let i = 0; i < sub; i++) step(dt / sub, now);
+    draw();
+    const energy = balls.reduce((s, b) => s + b.vx * b.vx + b.vy * b.vy, 0) / Math.max(1, balls.length);
+    if (now < spinningUntil || energy > 40 || Math.abs(omega) > .05) settle = now;
+    if (drumActive && !document.hidden && now - settle < 1500) raf = requestAnimationFrame(loop);
+    else last = 0;
+  }
+  function kick() { if (!raf) { settle = performance.now(); raf = requestAnimationFrame(loop); } }
+
+  let busy = false;
+  function spin() {
+    if (busy) return;
+    const p = pick(); if (!p) return;
+    if (reduceMotion) { winner = p.num; if (!balls.some(b => b.num === p.num) && balls.length) balls[0].num = p.num; draw(); commit(p, false); return; }
+    busy = true; $('#spin').disabled = true; winner = null;
+    if (!balls.some(b => b.num === p.num) && balls.length) balls[Math.floor(Math.random() * balls.length)].num = p.num;
+    spinningUntil = performance.now() + 1500; kick();
+    setTimeout(() => {
+      winner = p.num; kick(); commit(p, true);
+      busy = false; $('#spin').disabled = !pool().length;
+      if (matchMedia('(max-width: 900px)').matches) $('#ticket').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 2100);
+  }
+  $('#spin').addEventListener('click', spin);
+
+  readColors();
+  matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change', () => { readColors(); kick(); draw(); });
+  new MutationObserver(() => { readColors(); draw(); }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme', 'class', 'style'] });
+  new ResizeObserver(sizeDrum).observe(cv.parentElement);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) kick(); });
+
+  /* ---------- promos tab ---------- */
+  function renderPromos() {
+    const ys = P.filter(p => p.y);
+    const free = ys.filter(p => p.yp.some(x => x.kind === 'freeship'));
+    const codes = {};
+    ys.forEach(p => p.yp.filter(x => x.kind === 'code').forEach(x => { (codes[x.code] ||= { code: x.code, amts: {}, from: x.from, places: [] }); codes[x.code].amts[x.amt] = (codes[x.code].amts[x.amt] || 0) + 1; codes[x.code].places.push(p); }));
+    const codeCards = Object.values(codes).sort((a, b) => b.places.length - a.places.length).map(c => {
+      const amts = Object.keys(c.amts).map(Number).sort((a, b) => b - a);
+      const one = c.places.length === 1 ? c.places[0] : null;
+      return `<div class="info-card"><span class="big">−${amts[0]} р.</span>
+        <h3>Промокод в Яндекс Еде${one ? ' · ' + esc(one.n) : ''}</h3>
+        <div><button class="code" data-copy="${esc(c.code)}">${esc(c.code)} <span>копировать</span></button></div>
+        <p>${amts.length > 1 ? `Скидка ${amts.map(a => a + ' р.').join(' или ')} — зависит от заведения` : `Скидка ${amts[0]} р.`}${c.from ? `, на заказ от ${c.from} р.` : ''}. ${one ? 'Обычно только на первый заказ.' : `Действует в ${c.places.length} ${plural(c.places.length, 'заведении', 'заведениях', 'заведениях')}, обычно для новых пользователей.`}</p></div>`;
+    });
+    $('#promo-common').innerHTML = [
+      free.length ? `<div class="info-card"><span class="big">0 р.</span><h3>Бесплатная доставка первого заказа</h3><p>В Яндекс Еде — при заказе от 15 р. в ${free.length} ${plural(free.length, 'заведении', 'заведениях', 'заведениях')} с курьерами Яндекса.</p></div>` : '',
+      ...codeCards,
+    ].join('');
+
+    const items = [];
+    ys.forEach(p => {
+      const dish = p.yp.filter(x => x.kind === 'dish');
+      if (dish.length) {
+        const pcts = [...new Set(dish.map(x => x.pct))].sort((a, b) => b - a);
+        items.push({ kind: 'dish', p, sort: pcts[0], big: `−${pcts[0]}%`, sub: 'на блюда', title: p.n, text: `Скидки ${pcts.map(x => '−' + x + '%').join(', ')} на часть меню в Яндекс Еде, на любой заказ.`, url: p.y.url, where: 'Яндекс Еда' });
+      }
+      p.yp.filter(x => x.kind === 'gift').forEach(x => items.push({ kind: 'gift', p, sort: 0.5 - (x.from || 0) / 1000, big: '+1', sub: 'подарок', title: p.n, text: `${x.text} в Яндекс Еде, без учёта доставки.`, url: p.y.url, where: 'Яндекс Еда' }));
+    });
+    P.filter(p => p.o && (p.o.pr || []).length).forEach(p => {
+      const url = safeUrl(p.o.url) || p.y?.url;
+      p.o.pr.forEach(s => {
+        const pct = (s.match(/(\d+)\s?%/) || [])[1];
+        items.push({ kind: 'own', p, sort: pct ? +pct : 1, big: pct ? `−${pct}%` : '★', sub: 'напрямую', title: p.n, text: s, url, where: safeUrl(p.o.url) ? 'Сайт заведения' : 'Яндекс Еда', own: true });
+      });
+    });
+    const cnt = { all: items.length, dish: 0, gift: 0, own: 0 }; items.forEach(i => cnt[i.kind]++);
+    $('#cnt-promo').textContent = items.length;
+    const SEG = [['all', 'Все'], ['dish', 'Скидки на блюда'], ['own', 'На сайтах заведений'], ['gift', 'Подарки']].filter(([k]) => cnt[k]);
+    let cur = 'all';
+    const seg = $('#promo-seg');
+    const paint = () => {
+      seg.innerHTML = SEG.map(([k, n]) => `<button data-k="${k}" aria-pressed="${k === cur}">${n} <span class="mono" style="font-size:12px;opacity:.7">${cnt[k]}</span></button>`).join('');
+      const list = items.filter(i => cur === 'all' || i.kind === cur).sort((a, b) => b.sort - a.sort || (b.p.r || 0) - (a.p.r || 0));
+      $('#promo-rows').innerHTML = list.length ? list.map(i => `
+        <div class="row">
+          <div class="big ${i.own ? 'g' : ''}" style="${i.big.length > 5 ? 'font-size:15px' : ''}">${esc(i.big)}<small>${esc(i.sub)}</small></div>
+          <div style="min-width:0"><h3>${esc(i.title)} <span class="mono" style="color:var(--ink-2);font-size:12px;font-weight:500">№ ${i.p.num}</span></h3><p>${esc(i.text)}</p></div>
+          <div class="acts">${i.url ? `<a class="go" href="${esc(i.url)}" target="_blank" rel="noopener">${esc(i.where)} →</a>` : ''}</div>
+        </div>`).join('') : '<div class="empty">Акций этого типа сейчас нет.</div>';
+    };
+    seg.addEventListener('click', e => { const b = e.target.closest('[data-k]'); if (b) { cur = b.dataset.k; paint(); } });
+    paint();
+  }
+
+  /* ---------- compare tab ---------- */
+  function renderCompare() {
+    const withOwn = P.filter(p => p.o && p.y);
+    const cnt = { own: 0, yandex: 0, same: 0, unknown: 0 };
+    withOwn.forEach(p => { const v = verdictOf(p).v; cnt[v] = (cnt[v] || 0) + 1; });
+    const ys = P.filter(p => p.y), yc = ys.filter(p => !p.y.own).length;
+    $('#cmp-tips').innerHTML = `
+      <div class="info-card"><span class="big">${cnt.own}</span><h3>${plural(cnt.own, 'заведение', 'заведения', 'заведений')}, где напрямую выгоднее</h3><p>Обычно за счёт скидки на самовывоз, собственной бесплатной доставки или акций, которых нет в агрегаторе.</p></div>
+      <div class="info-card"><span class="big">${cnt.yandex}</span><h3>где выгоднее Яндекс Еда</h3><p>Скидки −20…50% на блюда и бесплатная доставка первого заказа часто перекрывают условия сайта.</p></div>
+      <div class="info-card"><span class="big">${yc}</span><h3>с курьерами Яндекса</h3><p>У них первый заказ доставляют бесплатно от 15 р., а дальше цена доставки зависит от расстояния и спроса. Сравните итог в корзине.</p></div>`;
+    const SEG = [['all', 'Все', withOwn.length], ['own', 'Напрямую выгоднее', cnt.own], ['yandex', 'Яндекс выгоднее', cnt.yandex], ['same', 'Одинаково', cnt.same], ['unknown', 'Нет данных', cnt.unknown]].filter(s => s[2]);
+    let cur = 'all';
+    const seg = $('#cmp-seg');
+    const rank = { own: 0, yandex: 1, same: 2, unknown: 3 };
+    const paint = () => {
+      seg.innerHTML = SEG.map(([k, n, c]) => `<button data-k="${k}" aria-pressed="${k === cur}">${n} <span class="mono" style="font-size:12px;opacity:.7">${c}</span></button>`).join('');
+      const list = withOwn.filter(p => cur === 'all' || verdictOf(p).v === cur).sort((a, b) => rank[verdictOf(a).v] - rank[verdictOf(b).v] || a.n.localeCompare(b.n, 'ru'));
+      $('#cmp-rows').innerHTML = `
+        <div class="cmp-row head"><span class="label">Заведение</span><span class="label">Яндекс Еда</span><span class="label">Напрямую</span><span class="label">Итог</span></div>` +
+        list.map(p => {
+          const vd = verdictOf(p);
+          const yPromos = p.y ? [p.maxPct ? `до −${p.maxPct}% на блюда` : '', ...p.yp.filter(x => x.kind === 'gift').slice(0, 1).map(x => x.text)].filter(Boolean).join('; ') : '';
+          const ou = safeUrl(p.o.url);
+          return `<div class="cmp-row">
+            <div><h3>${esc(p.n)}</h3><span class="sub">${esc(p.cz.slice(0, 3).join(' · '))}</span></div>
+            <div class="cmp-cell"><span class="label">Яндекс Еда</span>${p.y ? `<span>${esc(deliveryText(p))}</span>${yPromos ? `<span style="color:var(--red);font-weight:600">${esc(yPromos)}</span>` : ''}<a href="${esc(p.y.url)}" target="_blank" rel="noopener">Открыть меню →</a>` : '<span class="sub">нет в Яндекс Еде</span>'}</div>
+            <div class="cmp-cell"><span class="label">Напрямую</span><span>${esc(p.o.dl || 'условия не указаны')}</span>${(p.o.pr || []).length ? `<span style="color:var(--green);font-weight:600">${esc(p.o.pr.slice(0, 3).join('; '))}</span>` : ''}${p.o.phone ? `<span class="mono">${esc(p.o.phone)}</span>` : ''}${ou ? `<a href="${esc(ou)}" target="_blank" rel="noopener">Сайт заведения →</a>` : ''}</div>
+            <div class="cmp-cell"><span class="label">Итог</span><span><span class="vchip ${vd.v}">${esc(vd.label)}</span></span><span class="why">${esc(p.o.why || '')}</span></div>
+          </div>`;
+        }).join('');
+    };
+    seg.addEventListener('click', e => { const b = e.target.closest('[data-k]'); if (b) { cur = b.dataset.k; paint(); } });
+    paint();
+    const onlyY = P.filter(p => p.y && !p.o), onlyO = P.filter(p => !p.y);
+    $('#only-y').innerHTML = [
+      onlyY.length ? `<b>Ещё ${onlyY.length} ${plural(onlyY.length, 'заведение', 'заведения', 'заведений')}</b> принимают заказы только через Яндекс Еду (своего сайта с доставкой не нашли): ${onlyY.map(p => esc(p.n)).join(', ')}.` : '',
+      onlyO.length ? `<b>${onlyO.length} ${plural(onlyO.length, 'заведение', 'заведения', 'заведений')}</b> нет в Яндекс Еде — заказ только напрямую: ${onlyO.map(p => esc(p.n)).join(', ')}.` : '',
+    ].filter(Boolean).join('<br><br>');
+    $('#only-y').hidden = !onlyY.length && !onlyO.length;
+  }
+
+  /* ---------- all tab ---------- */
+  function renderAll() {
+    const nY = P.filter(p => p.y).length, nO = P.filter(p => !p.y).length;
+    $('#cnt-all').textContent = P.length;
+    $('#all-lead').textContent = `${P.length} ${plural(P.length, 'заведение', 'заведения', 'заведений')}: ${nY} в Яндекс Еде${nO ? `, ещё ${nO} принимают заказы только на своих сайтах` : ''}. Сети с несколькими точками собраны в одну строку.`;
+    const SORTS = [['num', 'По номеру'], ['rating', 'По рейтингу'], ['sale', 'По скидке']];
+    let cur = 'num';
+    const q = $('#q');
+    const paint = () => {
+      $('#sort-seg').innerHTML = SORTS.map(([k, n]) => `<button data-k="${k}" aria-pressed="${k === cur}">${n}</button>`).join('');
+      const s = q.value.trim().toLowerCase();
+      let list = P.filter(p => !s || (p.n + ' ' + p.cz.join(' ')).toLowerCase().includes(s));
+      list.sort(cur === 'rating' ? (a, b) => (b.r || 0) - (a.r || 0) : cur === 'sale' ? (a, b) => b.maxPct - a.maxPct || (b.r || 0) - (a.r || 0) : (a, b) => a.num - b.num);
+      $('#all-rows').innerHTML = list.length ? list.map(p => {
+        const [a, b] = orderTargets(p); const open = isOpen(p);
+        return `<div class="row list-row">
+          <div class="n">${p.num}</div>
+          ${p.img ? `<img class="thumb" src="img/${esc(p.img)}" alt="" loading="lazy">` : `<div class="thumb"></div>`}
+          <div style="min-width:0"><h3>${esc(p.n)} ${p.r ? `<span class="star" style="font-size:13px">★</span> <span class="mono" style="font-size:13px;font-weight:500">${p.r}</span>` : ''}${open === null ? '' : `<span class="pill ${open ? 'open' : 'closed'}">${open ? 'открыто' : 'закрыто'}</span>`}</h3>
+            <p>${esc(p.cz.slice(0, 4).join(' · '))} · ${esc(fmtHours(p.hours) || 'часы уточняйте')}${p.maxPct ? ` · <span style="color:var(--red);font-weight:600">до −${p.maxPct}%</span>` : ''}</p></div>
+          <div class="acts">${a ? `<a class="go" href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.label)}</a>` : ''}${b ? `<a class="go alt" href="${esc(b.url)}" target="_blank" rel="noopener">${esc(b.label)}</a>` : ''}</div>
+        </div>`;
+      }).join('') : '<div class="empty">Ничего не нашлось. Попробуйте другое слово.</div>';
+    };
+    q.addEventListener('input', paint);
+    $('#sort-seg').addEventListener('click', e => { const b = e.target.closest('[data-k]'); if (b) { cur = b.dataset.k; paint(); } });
+    paint();
+    const ag = D.aggregators || [];
+    if (ag.length) {
+      const box = $('#aggs'); box.hidden = false;
+      box.innerHTML = `<h3>Другие сервисы доставки в Гомеле</h3><ul>${ag.map(a => `<li><b style="color:var(--ink)">${esc(a.name)}</b> — ${esc(a.note || a.works_in_gomel || '')}${safeUrl(a.url) ? ` <a href="${esc(a.url)}" target="_blank" rel="noopener" style="color:var(--blue)">сайт</a>` : ''}</li>`).join('')}</ul>`;
+    }
+  }
+
+  /* ---------- copy ---------- */
+  document.addEventListener('click', e => {
+    const b = e.target.closest('[data-copy]'); if (!b) return;
+    const t = b.dataset.copy;
+    const done = ok => { const el = document.createElement('div'); el.className = 'toast'; el.textContent = ok ? `Промокод ${t} скопирован` : `Промокод: ${t}`; document.body.appendChild(el); setTimeout(() => el.remove(), 1800); };
+    try { navigator.clipboard.writeText(t).then(() => done(true), () => done(false)); } catch { done(false); }
+  });
+
+  /* ---------- boot ---------- */
+  $('#lead').textContent = `${P.length} ${plural(P.length, 'заведение', 'заведения', 'заведений')} с доставкой по Гомелю. Крутите барабан, и он выберет, откуда заказать. Номер на шаре — номер заведения.`;
+  $('#foot-data').textContent = `Данные собраны ${D.dateHuman} из Яндекс Еды и с сайтов заведений. Акции и цены доставки меняются — итог смотрите в корзине.`;
+  sizeDrum();
+  onFilter();
+  const first = (hist[0] && P.find(p => p.num === hist[0])) || pick();
+  if (first) { renderTicket(first, false); if (!hist.length) { hist = [first.num]; } renderHistory(); }
+  renderPromos(); renderCompare(); renderAll();
+  showTab((location.hash || '').slice(1));
+})();
+</script>
+
+</body>
+</html>
